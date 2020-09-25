@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='assets/img/logo.png'>
+
+    <title>Rafly Maulana</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <div id="particles-js"></div>
+        <section class="main slideup">
+            <img src="assets/img/logo-transparent.png" height="80">
+            <h1><span>Hi!</span> I'm Rafly Maulana</h1>
+            <h3>Indonesian Developer and Designer.</h3>
+            <a class="btn fadein"><button>&#128315 More About Me</button></a>
+        </section>
+    </header>
+
+    <main>
+        <section class="main" id="main">
+            <div class="card float">
+                <p class="blop1 float">&#127881;</p>
+                <p class="blop2 float"> &#128150;</p>
+                <div class="left">
+                    <img src="assets/img/logo-transparent.png" height="80">
+                </div>
+                <div class="right">
+                    <h5>About Me</h5>
+                    <h2>Rafly Maulana, <span>17</span></h2>
+                    <p>
+                        <span>Hi There!</span>
+                        <span>I'm a Fullstack Website Developer / Designer, Game Modder, and Bot Creator. Born and Raised in Indonesia. <b>My Work is My Passion &#x1F496;</b>.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M-6.54,106.88 C279.00,162.14 255.30,66.41 501.35,97.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;">
+                </path>
+            </svg>
+        </section>
+    </main>
+
+    <footer>
+        <section class="left">
+            <img src="assets/img/logo-transparent.png" height="50">
+            <p>Rafly Maulana, a Fullstack Developer and Designer from Indonesia.</p>
+            <ul>
+                <li onclick="goto('/')">Home</li>
+                <li onclick="goto('https://gallery.raflymaulana.com/')">Gallery</li>
+                <li onclick="goto('https://docs.raflymaulana.com/')">Documentation</li>
+                <li onclick="goto('https://status.raflymaulana.com/')">Status</li>
+            </ul>
+            <span class="love">Made With &#128150; by Me Myself. Proud &#127470;&#127465;</span>
+        </section>
+
+        <section class="right">
+            <h2>Reach Me</h2>
+            <section class="social">
+                <div onclick="goto('https://www.instagram.com/raflymln_/')" data-title='@raflymln_'>
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </div>
+                <div onclick="goto('https://twitter.com/raflymln')" data-title="@raflymln">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+                <div onclick="goto('https://discord.com/invite/xvhU8ny')" data-title="Invite Code: xvhU8ny">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Server</span>
+                </div>
+                <div onclick="goto('mailto:mraflymaulana@gmail.com')" data-title="mraflymaulana@gmail.com">
+                    <i class="fa fa-envelope"></i>
+                    <span>Email</span>
+                </div>
+                <span class="copyright">&copy; 2020 Rafly Maulana. All Rights Reserved.</span>
+            </section>
+        </section>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/particle.js"></script>
+
+    <script>
+        function goto(link) {
+            window.location.href = link;
+        }
+
+        $('.main .btn').click(function(e) {
+            const audio = new Audio("assets/audio/waterdrop.mp3");
+            audio.volume = 0.3;
+            audio.play();
+            $('header').stop().animate({
+                height: '70%'
+            }, 1000);
+            setTimeout(function() {
+                window.location.href = "#main";
+            }, 500);
+            e.preventDefault();
+        });
+
+        $(window).scroll(function() {
+
+            if ($(document).scrollTop() >= 180) {
+                $('header').stop().animate({
+                    height: '70%'
+                }, 1000);
+                return false;
+            } else {
+                $('header').stop().animate({
+                    height: '100%'
+                }, 500);
+                return false;
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
