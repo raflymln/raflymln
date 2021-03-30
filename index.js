@@ -11,10 +11,10 @@ const validateSignature = (request, key) => {
 
     const expectedSignature = "sha1=" +
         crypto.createHmac("sha1", key)
-        .update(JSON.stringify(req.body))
+        .update(JSON.stringify(request.body))
         .digest("hex");
 
-    const signature = req.headers["x-hub-signature"];
+    const signature = request.headers["x-hub-signature"];
     if (signature !== expectedSignature) {
         return false;
     }
