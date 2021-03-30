@@ -144485,6 +144485,8 @@ img {
   border-color: rgba(117, 172, 226, var(--tw-border-opacity)) !important;
   border-radius: 1.5rem !important;
   border-bottom-width: 4px !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
   --ta-filter-size: 0px 0px 8px !important;
 }
 

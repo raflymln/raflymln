@@ -1,43 +1,94 @@
 [
     [{
-            "name": "Foxxy",
-            "image": "/assets/img/projects/Foxxy.png",
-            "position": [
-                "Fullstack Developer",
-                "..."
-            ],
-            "work": [
-                "Backend System",
-                "UI/UX Design",
-                "Front End Development",
-                "..."
-            ],
-            "status": {
-                "name": "Finished",
-                "color": "green"
-            },
-            "link": "https://foxxy.id",
-            "moreinfo": false
+        "name": "Foxxy",
+        "image": "/assets/img/projects/Foxxy.png",
+        "position": [
+            "Fullstack Developer",
+            "..."
+        ],
+        "work": [
+            "Backend System",
+            "UI/UX Design",
+            "Front End Development",
+            "..."
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
         },
-        {
-            "name": "GPRESTORE ID",
-            "image": "/assets/img/projects/GPRESTORE.png",
-            "position": [
-                "Backend Developer",
-                "..."
-            ],
-            "work": [
-                "Backend System",
-                "Payment Gateway System",
-                "Database Reconfiguration",
-                "..."
-            ],
-            "status": {
-                "name": "Finished",
-                "color": "green"
-            },
-            "link": "https://gprestore.net/",
-            "moreinfo": false
-        }
-    ]
+        "link": "https://foxxy.id",
+        "moreinfo": false
+    }, {
+        "name": "GPRESTORE ID",
+        "image": "/assets/img/projects/GPRESTORE.png",
+        "position": [
+            "Backend Developer",
+            "..."
+        ],
+        "work": [
+            "Backend System",
+            "Payment Gateway System",
+            "Database Reconfiguration",
+            "..."
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
+        },
+        "link": "https://gprestore.net/",
+        "moreinfo": false
+    }],
+    [{
+        "name": "ASHUAP",
+        "image": "https://i.ytimg.com/an_webp/fz4rWkim6Q4/mqdefault_6s.webp?du=3000&sqp=CLDZjIMG&rs=AOn4CLAXahanRWr9U1pw_j7GvluXMfjpwg",
+        "position": [
+            "Film Producer"
+        ],
+        "work": [
+            "Video Editing",
+            "Film Director",
+            "Script Supervisor",
+            "..."
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
+        },
+        "link": "https://www.youtube.com/watch?v=fz4rWkim6Q4&t=78s",
+        "moreinfo": "https://www.youtube.com/watch?v=fz4rWkim6Q4&t=78s"
+    }, {
+        "name": "Nevermind",
+        "image": "https://i1.sndcdn.com/artworks-000350874690-jwea4q-t500x500.jpg",
+        "position": [
+            "Music Producer"
+        ],
+        "work": [
+            "Songwriting",
+            "Mixing",
+            "Mastering"
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
+        },
+        "link": "https://soundcloud.com/magicallyedm/never",
+        "moreinfo": "https://soundcloud.com/magicallyedm/never"
+    }, {
+        "name": "Nothing to Lose",
+        "image": "https://i1.sndcdn.com/artworks-000349505502-juc92r-t500x500.jpg",
+        "position": [
+            "Music Producer"
+        ],
+        "work": [
+            "Composing",
+            "Mixing",
+            "Mastering"
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
+        },
+        "link": "https://soundcloud.com/trapicalmusic/nothing-to-lose",
+        "moreinfo": "https://soundcloud.com/trapicalmusic/nothing-to-lose"
+    }]
 ]
