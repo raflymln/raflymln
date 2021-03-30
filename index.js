@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
     res.render('pages/home');
 });
 
+// Tes dulu
 app.post('/git-update', (req, res) => {
     console.log(`[${new Date().toLocaleString()}] (Github) Receiving Repository Update`);
 
