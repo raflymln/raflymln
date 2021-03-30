@@ -7,6 +7,10 @@ const server = http.createServer(app);
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(async(req, res, next) => {
+    console.log(`[${new Date().toLocaleString()}] ${requestIp} (${req.method}) | New Request on: ${req.path}`);
+    next();
+});
 
 app.get('/', (req, res) => {
     res.render('pages/home');
