@@ -1,0 +1,59 @@
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.jquery-modal {
+    z-index: 9999999 !important;
+}
+
+#cta>a>div>section>h1,
+#cta>a>div>section>img {
+    transition: ease-in .2s;
+    filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.212));
+}
+
+#circle-left {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.21), inset -4px -6px 4px rgba(117, 172, 226, 1);
+    height: 515px;
+    width: 515px;
+}
+
+#circle-right {
+    box-shadow: -4px 8px 15px rgba(0, 0, 0, 0.25), inset 4px -8px 4px rgba(205, 179, 112, 1);
+    height: 333px;
+    width: 333px;
+}
+
+#head-title {
+    filter: drop-shadow(-5px 5px 3px rgba(78, 78, 78, 0.08))
+}
+
+#project-list div #right {
+    height: 350px;
+    width: 630px;
+    border-radius: 60px;
+    border: solid 6px white;
+    background-size: cover;
+    background-position: top center;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#project-list div #right #blocker {
+    border-radius: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    #project-list div #right {
+        border-radius: 30px;
+        height: 280px;
+        width: auto;
+    }
+    #project-list div #right #blocker {
+        border-radius: 30px;
+    }
+    .about-box {
+        filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.200));
+    }
+}

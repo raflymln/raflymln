@@ -1,0 +1,43 @@
+[
+    [{
+            "name": "Foxxy",
+            "image": "/assets/img/projects/Foxxy.png",
+            "position": [
+                "Fullstack Developer",
+                "..."
+            ],
+            "work": [
+                "Backend System",
+                "UI/UX Design",
+                "Front End Development",
+                "..."
+            ],
+            "status": {
+                "name": "Finished",
+                "color": "green"
+            },
+            "link": "https://foxxy.id",
+            "moreinfo": false
+        },
+        {
+            "name": "GPRESTORE ID",
+            "image": "/assets/img/projects/GPRESTORE.png",
+            "position": [
+                "Backend Developer",
+                "..."
+            ],
+            "work": [
+                "Backend System",
+                "Payment Gateway System",
+                "Database Reconfiguration",
+                "..."
+            ],
+            "status": {
+                "name": "Finished",
+                "color": "green"
+            },
+            "link": "https://gprestore.net/",
+            "moreinfo": false
+        }
+    ]
+]

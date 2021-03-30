@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+::-moz-selection {
+    @apply bg-blue-300 text-white;
+}
+
+::selection {
+    @apply bg-blue-300 text-white;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+img {
+    pointer-events: none;
+}
+
+.profile-modal {
+    @apply bg-blue-300 rounded-3xl border-b-4 py-12 border-blue-400 drop-shadow-lg !important;
+}
+
+.btn {
+    @apply ease-in duration-200 cursor-pointer;
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.200));
+}
+
+.btn:hover {
+    @apply border-b-0;
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    transform: translateY(4px);
+}
+
+.illustration {
+    @apply ease-in duration-200 cursor-pointer;
+    filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.200));
+}
+
+.illustration:hover {
+    transform: scale(1.05);
+}
+
+.cloud-slow {
+    animation-duration: 9.5s;
+    width: 180px;
+}
+
+.cloud-slower {
+    animation-duration: 11.2s;
+    width: 210px;
+}
+
+.cloud-slowest {
+    animation-duration: 13.5s;
+    width: 145px;
+}
+
+.cloud-super-slow {
+    animation-duration: 20.5s;
+    width: 295px;
+}
