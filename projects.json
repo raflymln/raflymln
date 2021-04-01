@@ -59,7 +59,7 @@
     }],
     [{
         "name": "ASHUAP",
-        "image": "https://i.ytimg.com/an_webp/fz4rWkim6Q4/mqdefault_6s.webp?du=3000&sqp=CLDZjIMG&rs=AOn4CLAXahanRWr9U1pw_j7GvluXMfjpwg",
+        "image": "/assets/img/projects/ashuap.png",
         "position": [
             "Film Producer"
         ],
@@ -73,8 +73,8 @@
             "name": "Finished",
             "color": "green"
         },
-        "link": "https://www.youtube.com/watch?v=fz4rWkim6Q4&t=78s",
-        "moreinfo": "https://www.youtube.com/watch?v=fz4rWkim6Q4&t=78s"
+        "link": "https://www.youtube.com/watch?v=fz4rWkim6Q4",
+        "moreinfo": "https://www.youtube.com/watch?v=fz4rWkim6Q4"
     }, {
         "name": "Nevermind",
         "image": "https://i1.sndcdn.com/artworks-000350874690-jwea4q-t500x500.jpg",
