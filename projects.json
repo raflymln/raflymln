@@ -1,5 +1,24 @@
 [
     [{
+        "name": "Rafly Maulana",
+        "image": "/assets/img/projects/Rafly Maulana.png",
+        "position": [
+            "Fullstack Developer",
+            "..."
+        ],
+        "work": [
+            "Color Composition",
+            "UI/UX Design",
+            "Front End Development",
+            "..."
+        ],
+        "status": {
+            "name": "Finished",
+            "color": "green"
+        },
+        "link": "https://raflymaulana.me",
+        "moreinfo": "https://www.notion.so/raflymln/Rafly-Maulana-Website-dedcadf4eb8042e9b6f25c89fea163d4"
+    }, {
         "name": "Foxxy",
         "image": "/assets/img/projects/Foxxy.png",
         "position": [
@@ -36,7 +55,7 @@
             "color": "green"
         },
         "link": "https://gprestore.net/",
-        "moreinfo": false
+        "moreinfo": "https://www.notion.so/raflymln/GPrestore-Indonesia-153438d9824c46d6b8d0c1b7b157c24b"
     }],
     [{
         "name": "ASHUAP",
