@@ -61,13 +61,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(requestLogger);
 
 app.get('/', (req, res) => {
-    res.render('pages/home');
+    return res.render('pages/home');
 });
 
-app.post('/git-update', (req, res) => {
+app.get('/notion/:page', (req, res) => {
+    const redirect = (page = req.params.page) => {
+        switch (page) {
+            case 'tasks':
+                return 'https://www.notion.so/raflymln/bf27b09a5877486ea16c1e483ddfa594?v=b8c1305159ce491db4a3f545af7945fa';
+            default:
+                return '/'
+        }
+    }
+
+    return res.redirect(redirect());
+});
+
+app.post('/git/update', (req, res) => {
+    const ws_secret = "CXzpS6ve3uDLy48E";
     log("Github", "Receiving Repository Update Hooks");
 
-    if (validateSignature(req, "yakalibisatausecretiniwkwkwk")) {
+    if (validateSignature(req, ws_secret)) {
         log("Github", "Webhook Signature Validated");
         execute("cd /var/www/raflymaulana && git stash && git pull && npm i && pm2 restart all");
         return res.sendStatus(200);
@@ -84,8 +98,9 @@ app.post('/projects', (req, res) => {
         return res.send(data);
     } catch (error) {
         log("SYSTEM", error);
-        throw new Error('Failed to Read JSON');
+        throw new Error(`Failed to Read JSON File on: ${req.path}`);
     }
-})
+});
+
 
 server.listen(3000, () => log("SYSTEM", "Process is Now Online on Port 3000!"));
