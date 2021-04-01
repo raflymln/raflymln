@@ -144456,6 +144456,11 @@ video {
   }
 }
 
+html, body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 ::-moz-selection {
   --tw-bg-opacity: 1;
   background-color: rgba(161, 198, 234, var(--tw-bg-opacity));
@@ -144474,11 +144479,15 @@ video {
   scroll-behavior: smooth;
 }
 
+.jquery-modal {
+  z-index: 9999999 !important;
+}
+
 img {
   pointer-events: none;
 }
 
-.profile-modal {
+.links-modal {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(161, 198, 234, var(--tw-bg-opacity)) !important;
   --tw-border-opacity: 1 !important;

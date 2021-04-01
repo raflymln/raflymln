@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
+html,
+body {
+    @apply relative overflow-x-hidden;
+}
+
 ::-moz-selection {
     @apply bg-blue-300 text-white;
 }
@@ -14,11 +19,15 @@
     scroll-behavior: smooth;
 }
 
+.jquery-modal {
+    z-index: 9999999 !important;
+}
+
 img {
     pointer-events: none;
 }
 
-.profile-modal {
+.links-modal {
     @apply bg-blue-300 rounded-3xl border-b-4 py-12 border-blue-400 drop-shadow-lg !important;
 }
 
