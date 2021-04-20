@@ -20,7 +20,7 @@
     "homepage": "https://github.com/raflymln/raflymaulana#readme",
     "devDependencies": {
         "autoprefixer": "^10.2.5",
-        "tailwindcss": "^2.0.3"
+        "tailwindcss": "^2.1.1"
     },
     "dependencies": {
         "@markusantonwolf/tailwind-css-plugin-filters": "^1.2.1",
@@ -29,6 +29,7 @@
         "express": "^4.17.1",
         "glob": "^7.1.6",
         "http": "^0.0.1-security",
+        "postcss": "^8.2.10",
         "tailwindcss-blend-mode": "^1.0.0"
     }
 }

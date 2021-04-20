@@ -64,19 +64,6 @@ app.get('/', (req, res) => {
     return res.render('pages/home');
 });
 
-app.get('/notion/:page', (req, res) => {
-    const redirect = (page = req.params.page) => {
-        switch (page) {
-            case 'tasks':
-                return 'https://www.notion.so/raflymln/bf27b09a5877486ea16c1e483ddfa594?v=b8c1305159ce491db4a3f545af7945fa';
-            default:
-                return '/'
-        }
-    }
-
-    return res.redirect(redirect());
-});
-
 app.post('/git/update', (req, res) => {
     const ws_secret = "CXzpS6ve3uDLy48E";
     log("Github", "Receiving Repository Update Hooks");
