@@ -1,3 +1,4 @@
+require('dotenv').config()
 const fs = require('fs');
 const http = require('http');
 const express = require('express');
@@ -65,10 +66,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/git/update', (req, res) => {
-    const ws_secret = "CXzpS6ve3uDLy48E";
     log("Github", "Receiving Repository Update Hooks");
 
-    if (validateSignature(req, ws_secret)) {
+    if (validateSignature(req, process.env.GITHUB_WEBHOOK_SECRET)) {
         log("Github", "Webhook Signature Validated");
         execute("cd /var/www/raflymaulana && git stash && git pull && npm i && pm2 restart all");
         return res.sendStatus(200);
