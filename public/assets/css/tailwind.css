@@ -635,6 +635,10 @@ img {
 	--ta-filter-size: 0px 0px 8px !important;
 }
 
+.links-modal > section > h1 {
+    text-shadow: -2px 7px 13px rgba(0, 0, 0, 0.19);
+}
+
 .btn {
 	--tw-translate-x: 0;
 	--tw-translate-y: 0;
@@ -704,6 +708,10 @@ img {
 	width: 295px;
     -webkit-animation-duration: 20.5s;
             animation-duration: 20.5s;
+}
+
+#navigation {
+    transition: background-color 500ms linear;
 }
 
 #cta > a > div > section > h1, #cta > a > div > section > img {
@@ -858,8 +866,12 @@ img {
 	top: -0.25rem;
 }
 
-.z-40 {
-	z-index: 40;
+.\!z-\[999999999999\] {
+	z-index: 999999999999 !important;
+}
+
+.\!z-\[9999999\] {
+	z-index: 9999999 !important;
 }
 
 .z-10 {
@@ -1017,8 +1029,24 @@ img {
 	height: 6rem;
 }
 
+.max-h-\[850px\] {
+	max-height: 850px;
+}
+
+.max-h-\[600px\] {
+	max-height: 600px;
+}
+
+.max-h-\[452px\] {
+	max-height: 452px;
+}
+
 .max-h-28 {
 	max-height: 7rem;
+}
+
+.max-h-\[415px\] {
+	max-height: 415px;
 }
 
 .max-h-60 {
@@ -1081,6 +1109,10 @@ img {
 
 .max-w-2xl {
 	max-width: 42rem;
+}
+
+.max-w-\[910px\] {
+	max-width: 910px;
 }
 
 .max-w-full {
@@ -1631,6 +1663,10 @@ img {
 	opacity: 0.7;
 }
 
+.\!opacity-50 {
+	opacity: 0.5 !important;
+}
+
 .opacity-50 {
 	opacity: 0.5;
 }
@@ -1642,14 +1678,6 @@ img {
 
 .drop-shadow-md {
 	--tw-drop-shadow: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
-}
-
-.transition {
-	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
 }
 
 .transition-all {
@@ -1664,6 +1692,10 @@ img {
 
 .ease-in {
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-linear {
+	transition-timing-function: linear;
 }
 
 .ease-in-out {
