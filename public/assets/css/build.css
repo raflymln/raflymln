@@ -1,7 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-@tailwind screens;
 html,
 body {
     @apply relative overflow-x-hidden;
@@ -19,12 +17,12 @@ body {
     scroll-behavior: smooth;
 }
 
-.jquery-modal {
-    z-index: 9999999 !important;
-}
-
 img {
     pointer-events: none;
+}
+
+.jquery-modal {
+    z-index: 9999999999 !important;
 }
 
 .links-modal {
@@ -33,7 +31,7 @@ img {
 
 .btn {
     @apply ease-in duration-200 cursor-pointer;
-    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.200));
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.2));
 }
 
 .btn:hover {
@@ -44,7 +42,7 @@ img {
 
 .illustration {
     @apply ease-in duration-200 cursor-pointer;
-    filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.200));
+    filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.2));
 }
 
 .illustration:hover {
@@ -52,21 +50,64 @@ img {
 }
 
 .cloud-slow {
+    @apply w-[180px];
     animation-duration: 9.5s;
-    width: 180px;
 }
 
 .cloud-slower {
+    @apply w-[210px];
     animation-duration: 11.2s;
-    width: 210px;
 }
 
 .cloud-slowest {
+    @apply w-[145px];
     animation-duration: 13.5s;
-    width: 145px;
 }
 
 .cloud-super-slow {
+    @apply w-[295px];
     animation-duration: 20.5s;
-    width: 295px;
 }
+
+#cta > a > div > section > h1,
+#cta > a > div > section > img {
+    @apply ease-in duration-75;
+    filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.212));
+}
+
+#circle-left {
+    @apply w-[515px] h-[515px];
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.21), inset -4px -6px 4px rgba(117, 172, 226, 1);
+}
+
+#circle-right {
+    @apply w-[333px] h-[333px];
+    box-shadow: -4px 8px 15px rgba(0, 0, 0, 0.25), inset 4px -8px 4px rgba(205, 179, 112, 1);
+}
+
+#head-title {
+    filter: drop-shadow(-5px 5px 3px rgba(78, 78, 78, 0.08));
+}
+
+#project-list div #right {
+    @apply h-[350px] w-[630px] rounded-[60px] border-[6px] border-white bg-cover bg-top;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#project-list div #right #blocker {
+    @apply rounded-[60px];
+}
+
+@media screen and (max-width: 768px) {
+    #project-list div #right {
+        @apply rounded-3xl h-72 w-auto;
+    }
+    #project-list div #right #blocker {
+        @apply rounded-3xl;
+    }
+    .about-box {
+        filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.2));
+    }
+}
+@tailwind utilities;
+@tailwind screens;

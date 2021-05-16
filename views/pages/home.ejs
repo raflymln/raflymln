@@ -12,28 +12,33 @@
 
     If you need help about your website or need some guide, feel free to contact me through this email: mraflymaulana@gmail.com
  -->
-<html>
+<html lang="en">
 
 <head>
     <title>Rafly Maulana</title>
-    <%- include('../partials/head'); %>
+    <%- include('../components/head'); %>
 </head>
 
 <body class="relative w-full overflow-x-hidden">
     <!-- Navbar -->
     <nav>
-        <%- include('../partials/navbar'); %>
+        <%- include('../components/navbar'); %>
     </nav>
 
     <!-- Header -->
-    <section id="header" class="w-full h-full pt-10 flex flex-col items-center justify-center relative bg-blue-300" style="max-height: 850px;">
-        <section class="container max-w-screen-xl min-h-full h-full mx-auto px-12 py-12 relative text-blue-900 text-center z-30">
-            <section class="flex flex-wrap flex-col items-center justify-start relative z-50 rellax" data-rellax-speed="2">
+    <section id="header" class="w-full h-full pt-10 flex flex-col items-center justify-center relative bg-blue-300"
+        style="max-height: 850px;">
+        <section
+            class="container max-w-screen-xl min-h-full h-full mx-auto px-12 py-12 relative text-blue-900 text-center z-30">
+            <section class="flex flex-wrap flex-col items-center justify-start relative z-50 rellax"
+                data-rellax-speed="2">
                 <p class="leading-normal text-base md:text-xl font-maven-pro font-medium mx-auto">
                     Hello There! Nice to Meet You,
                 </p>
 
-                <a id="head-me" class="mb-4 md:mt-3 text-4xl transform hover:scale-105 lg:text-6xl font-bold leading-tight w-full font-rubik text-white transition-all duration-200 ease-in-out tracking-wide" href="#">
+                <a id="head-me"
+                    class="mb-4 md:mt-3 text-4xl transform hover:scale-105 lg:text-6xl font-bold leading-tight w-full font-rubik text-white transition-all duration-200 ease-in-out tracking-wide"
+                    href="#">
                     <span id="head-title" class="tracking-wide">I'm Rafly Maulana</span>
                 </a>
 
@@ -42,43 +47,56 @@
                 </p>
 
                 <section>
-                    <%- include('../partials/socials'); %>
+                    <%- include('../components/socials'); %>
                 </section>
             </section>
 
-            <section class="absolute bottom-0 left-0 w-full flex items-center justify-center z-20 rellax" data-rellax-speed="2">
-                <img src="/assets/img/3D/citytown.png" class="absolute w-full mx-auto h-full flex items-center justify-center z-10 animate__animated animate__backInUp animate__delay-1s" style="max-height: 600px;max-width:910px;opacity: .5 !important;">
-                <img src="/assets/img/3D/Saly/Saly-10.png" class="relative z-20  animate__animated animate__fadeInUpBig animate__delay-2s" style="max-height: 452px;">
-                <a href="#cta" class="absolute bottom-20 md:bottom-14 mx-auto text-white z-30 transform hover:scale-110 ease-in duration-200 animate__animated animate__fadeIn animate__delay-3s">
+            <section class="absolute bottom-0 left-0 w-full flex items-center justify-center z-20 rellax"
+                data-rellax-speed="2">
+                <img alt="" src="/assets/img/3D/citytown.png"
+                    class="absolute w-full mx-auto h-full flex items-center justify-center z-10 animate__animated animate__backInUp animate__delay-1s"
+                    style="max-height: 600px;max-width:910px;opacity: .5 !important;">
+                <img alt="" src="/assets/img/3D/Saly/Saly-10.png"
+                    class="relative z-20  animate__animated animate__fadeInUpBig animate__delay-2s"
+                    style="max-height: 452px;">
+                <a href="#cta"
+                    class="absolute bottom-20 md:bottom-14 mx-auto text-white z-30 transform hover:scale-110 ease-in duration-200 animate__animated animate__fadeIn animate__delay-3s">
                     <i class="fa fa-chevron-down text-4xl animate__animated animate__bounce animate__delay-4s"></i>
                 </a>
             </section>
         </section>
 
-        <section class="absolute bottom-1/2 left-0 w-full flex items-center justify-center z-10 max-w-full blend-overlay overflow-x-hidden rellax" data-rellax-speed="-3">
-            <img src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slow -mt-8">
-            <img src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slower -mt-14">
-            <img src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slowest">
-            <img src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-super-slow mt-10">
+        <section
+            class="absolute bottom-1/2 left-0 w-full flex items-center justify-center z-10 max-w-full blend-overlay overflow-x-hidden rellax"
+            data-rellax-speed="-3">
+            <img alt="" src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slow -mt-8">
+            <img alt="" src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slower -mt-14">
+            <img alt="" src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-slowest">
+            <img alt="" src="/assets/img/3D/cloud.png" class="animate-moveclouds cloud-super-slow mt-10">
         </section>
     </section>
 
     <!-- CTA -->
-    <section id="cta" class="container max-w-screen-xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-3 text-white space-y-5 lg:space-y-0">
+    <section id="cta"
+        class="container max-w-screen-xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 lg:grid-cols-3 text-white space-y-5 lg:space-y-0">
         <a class="w-full lg:pr-8" href="#about">
-            <div class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 bg-red-300 border-red-400">
+            <div
+                class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 bg-red-300 border-red-400">
                 <section class="w-full sm:w-2/3 lg:ml-8">
                     <h1 class="font-rubik font-bold text-3xl sm:text-4xl">Get to Know Me</h1>
-                    <p class="font-maven-pro font-bold text-base mt-3 leading-tight">Get to know me better, maybe we can be friends!
+                    <p class="font-maven-pro font-bold text-base mt-3 leading-tight">Get to know me better, maybe we can
+                        be friends!
                     </p>
                 </section>
                 <section class="mb-4 sm:mb-0">
-                    <img src="/assets/img/3D/Saly/Saly-15.png" data-cover="bottom:0;right:0;width:100%" class="illustration lg:absolute -bottom-12 -right-3 h-44 rellax" data-rellax-speed="0">
+                    <img alt="" src="/assets/img/3D/Saly/Saly-15.png" data-cover="bottom:0;right:0;width:100%"
+                        class="illustration lg:absolute -bottom-12 -right-3 h-44 rellax" data-rellax-speed="0">
                 </section>
             </div>
         </a>
         <a class="w-full lg:px-4 xl:px-8" href="#projects">
-            <div class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 bg-yellow-300 border-yellow-400">
+            <div
+                class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 bg-yellow-300 border-yellow-400">
                 <section class="w-full sm:w-1/2 lg:ml-28">
                     <h1 class="font-rubik font-bold text-3xl sm:text-4xl">My <br class="hidden sm:block">Projects
                     </h1>
@@ -86,45 +104,59 @@
                     </p>
                 </section>
                 <section class="mb-4 sm:mb-0">
-                    <img src="/assets/img/3D/Saly/Saly-22.png" data-cover="top:0;left:0;width:100%" class="illustration lg:absolute top-10 -left-14 h-40 rellax" data-rellax-speed="0">
+                    <img alt="" src="/assets/img/3D/Saly/Saly-22.png" data-cover="top:0;left:0;width:100%"
+                        class="illustration lg:absolute top-10 -left-14 h-40 rellax" data-rellax-speed="0">
                 </section>
             </div>
         </a>
         <a class="w-full lg:pl-8 relative z-50" href="#contact" onclick="animateSocial();">
-            <div class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 z-30 bg-blue-300 border-blue-400">
+            <div
+                class="w-full btn h-auto sm:h-56 relative rounded-3xl py-10 flex flex-col-reverse sm:flex-row items-center justify-between px-8 lg:px-0 lg:block border-b-4 z-30 bg-blue-300 border-blue-400">
                 <section class="w-full sm:w-1/2 lg:ml-24">
                     <h1 class="font-rubik font-bold text-3xl sm:text-4xl">Contact <br class="hidden sm:block">Me
                     </h1>
-                    <p class="font-maven-pro font-bold text-base mt-3 leading-tight">Wanted to hire me? Or just wanted to say Hi?</p>
+                    <p class="font-maven-pro font-bold text-base mt-3 leading-tight">Wanted to hire me? Or just wanted
+                        to say Hi?</p>
                 </section>
                 <section class="mb-4 sm:mb-0">
-                    <img src="/assets/img/3D/Saly/Saly-14.png" data-cover="bottom:0;left:10;width:100%" class="illustration lg:absolute -bottom-12 -left-9 h-44 rellax" data-rellax-speed="0">
+                    <img alt="" src="/assets/img/3D/Saly/Saly-14.png" data-cover="bottom:0;left:10;width:100%"
+                        class="illustration lg:absolute -bottom-12 -left-9 h-44 rellax" data-rellax-speed="0">
                 </section>
             </div>
         </a>
     </section>
 
     <!-- About -->
-    <section id="about" class="relative container max-w-screen-xl mx-auto px-6 lg:px-0 py-12 lg:py-4 flex flex-col lg:justify-start lg:items-stretch items-center lg:flex-row">
+    <section id="about"
+        class="relative container max-w-screen-xl mx-auto px-6 lg:px-0 py-12 lg:py-4 flex flex-col lg:justify-start lg:items-stretch items-center lg:flex-row">
         <div id="circle-left" class="bg-blue-300 animate-float rounded-full absolute top-16 -left-52 z-10"></div>
         <div id="circle-right" class="bg-yellow-300 animate-float rounded-full absolute -top-32 -right-52 z-10">
-            <img src="/assets/img/3D/Saly/Saly-28.png" data-cover="width:100%;bottom:0;left:0" class="illustration animate-float max-h-28 absolute bottom-10 -left-10 hidden sm:block">
+            <img alt="" src="/assets/img/3D/Saly/Saly-28.png" data-cover="width:100%;bottom:0;left:0"
+                class="illustration animate-float max-h-28 absolute bottom-10 -left-10 hidden sm:block">
         </div>
 
-        <img src="/assets/img/3D/Saly/Saly-12.png" class="illustration animate-float relative z-20" style="max-height: 415px;">
-        <section class="relative about-box z-20 max-w-2xl my-auto bg-white lg:bg-transparent rounded-3xl py-12 px-6 lg:p-0 lg:pr-8 xl:pr-0 xl:pl-12 md:shadow-none animate__animated">
-            <h1 class="text-4xl text-blue-800 font-rubik font-bold">Doing it with <span class="text-blue-400">passion</span>.</h1>
+        <img alt="" src="/assets/img/3D/Saly/Saly-12.png" class="illustration animate-float relative z-20"
+            style="max-height: 415px;">
+        <section
+            class="relative about-box z-20 max-w-2xl my-auto bg-white lg:bg-transparent rounded-3xl py-12 px-6 lg:p-0 lg:pr-8 xl:pr-0 xl:pl-12 md:shadow-none animate__animated">
+            <h1 class="text-4xl text-blue-800 font-rubik font-bold">Doing it with <span
+                    class="text-blue-400">passion</span>.</h1>
             <p id="about-me" class="font-domine text-base mt-4 text-blue-700">
-                My name is Muhammad Rafly Maulana. In my 18 years of life I have experienced things like Producing Music, Graphic Designing, Fullstack Programming, etc. But one thing I always stick with is, I always do it as my passion, and that's what makes it the best.
+                My name is Muhammad Rafly Maulana. In my 18 years of life I have experienced things like Producing
+                Music, Graphic Designing, Fullstack Programming, etc. But one thing I always stick with is, I always do
+                it as my passion, and that's what makes it the best.
             </p>
             <section class="flex flex-col sm:flex-row mt-4 space-y-3 sm:space-y-0 sm:space-x-3">
-                <a class="bg-blue-400 btn w-full sm:w-max text-center sm:text-left border-b-4 rounded-3xl py-3 px-6 font-rubik font-bold text-white border-blue-500" onclick="moreAboutMe(this)" data-switch="1">
+                <a class="bg-blue-400 btn w-full sm:w-max text-center sm:text-left border-b-4 rounded-3xl py-3 px-6 font-rubik font-bold text-white border-blue-500"
+                    onclick="moreAboutMe(this)" data-switch="1">
                     More About Me
                 </a>
-                <a class="bg-red-300 btn border-b-4 w-full sm:w-max text-center sm:text-left rounded-3xl py-3 px-6 font-rubik font-bold text-white border-red-500" onclick="alert('Will be out soon!')">
+                <a class="bg-red-300 btn border-b-4 w-full sm:w-max text-center sm:text-left rounded-3xl py-3 px-6 font-rubik font-bold text-white border-red-500"
+                    onclick="alert('Will be out soon!')">
                     My Resume
                 </a>
-                <a class="bg-yellow-300 btn border-b-4 w-full sm:w-max text-center sm:text-left rounded-3xl py-3 px-6 font-rubik font-bold text-white border-yellow-500" onclick="alert('Will be out soon!')">
+                <a class="bg-yellow-300 btn border-b-4 w-full sm:w-max text-center sm:text-left rounded-3xl py-3 px-6 font-rubik font-bold text-white border-yellow-500"
+                    onclick="alert('Will be out soon!')">
                     My CV
                 </a>
             </section>
@@ -132,24 +164,84 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="min-h-screen bg-blue-400 relative" x-data="{ tab: 'page1' }">
-        <img src="/assets/img/dots.png" class="h-64 w-64 absolute -top-32 -right-32">
+    <section id="projects" class="min-h-screen bg-blue-400 relative" x-data="{ tab: 'page0' }">
+        <img alt="" src="/assets/img/dots.png" class="h-64 w-64 absolute -top-32 -right-32">
 
         <section class="relative container max-w-screen-xl mx-auto px-6 xl:px-0 pt-24 pb-8 mt-4 flex flex-col">
             <div class="w-full flex flex-col md:flex-row justify-between items-start">
-                <img src="/assets/img/3D/Saly/Saly-1.png" class="illustration max-h-60">
+                <img alt="" src="/assets/img/3D/Saly/Saly-1.png" class="illustration max-h-60">
                 <section class="text-right text-white mt-4 md:mt-0 w-full">
                     <h1 class="text-6xl font-rubik font-bold">My Projects</h1>
-                    <p class="font-domine text-lg max-w-xl mt-4 ml-auto">Herein lies all my work that I have done before. Hope you like it!</p>
-                    <section id="pagination" class="flex flex-row space-x-3 justify-end mt-4"></section>
+                    <p class="font-domine text-lg max-w-xl mt-4 ml-auto">Herein lies all my work that I have done
+                        before. Hope you like it!</p>
+                    <section id="pagination" class="flex flex-row space-x-3 justify-end mt-4">
+                        <% projects.map((project, page)=> { %> 
+                            <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ 'bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
+                                <%-page+1%>
+                            </a>
+                        <% }) %>
+                    </section>
                 </section>
             </div>
         </section>
 
-        <section id="project-list"></section>
+        <section id="project-list">
+            <% projects.map((project, page) => { %> 
+                <section id="project-list-<%-page%>" x-show="tab === 'page<%-page%>'" class="relative container max-w-screen-xl mx-auto px-6 xl:px-0 pt-12 pb-24 mt-4 flex flex-col space-y-24">
+                    <% project.map(x => { %> 
+                        <div class="flex flex-col-reverse lg:flex-row">
+                            <section id="left" class="flex flex-col items-start justify-between flex-grow mt-4 pt-8 lg:pt-0 lg:mt-0 space-y-4">
+                                <section class="text-white">
+                                    <p class="font-rubik text-sm font-medium uppercase opacity-50">Position</p>
+                                    <h1 class="font-rubik font-bold text-xl mt-2">
+                                        <%-x.position.join('<br>')%>
+                                    </h1>
+                                </section>
+            
+                                <section class="text-white">
+                                    <p class="font-rubik text-sm font-medium uppercase opacity-50">Work</p>
+                                    <h1 class="font-rubik font-bold text-xl mt-2">
+                                        <%-x.work.join('<br>')%>
+                                    </h1>
+                                </section>
+            
+                                <section class="flex flex-row items-start space-x-3 w-full">
+                                    <a href=<%-x.moreinfo%> class="bg-yellow-300 btn w-full sm:w-max text-center sm:text-left border-b-4 rounded-3xl py-3 px-8 font-rubik font-bold text-white border-yellow-400">
+                                        Learn More
+                                    </a>
+            
+                                    <a href=<%-x.link%> class="bg-red-300 btn w-max text-center sm:text-left border-b-4 rounded-3xl p-3 font-rubik font-bold text-white border-red-400">
+                                        <i class="fa fa-globe-asia text-2xl"></i>
+                                    </a>
+                                </section>
+                            </section>
+            
+                            <section id="right" class="relative" style="background-image: url(<%-x.image%>);">
+                                <div id="blocker" class="absolute h-full w-full bg-black opacity-50 z-10"></div>
+            
+                                <div class="w-full h-full relative z-20 flex flex-col justify-between items-center py-8">
+                                    <span>&nbsp;</span>
+                                    <h1 class="font-rubik font-bold text-4xl md:text-5xl text-white overflow-ellipsis overflow-hidden w-full px-5 text-center"><%-x.name%></h1>
+                                    <section class="text-center">
+                                        <p class="font-rubik text-sm font-medium uppercase opacity-50 text-white">Status</p>
+                                        <h1 class="font-rubik font-bold text-xl mt-2 project-status text-white"><%-x.status.name%></h1>
+                                    </section>
+                                </div>
+                            </section>
+                        </div>
+                    <% }) %> 
+                </section>
+            <% }) %> 
+        </section>
 
         <section class="w-full mx-auto relative z-50">
-            <section id="pagination2" class="flex flex-row space-x-3 justify-center items-center mt-4"></section>
+            <section id="pagination2" class="flex flex-row space-x-3 justify-center items-center mt-4">
+                <% projects.map((project, page) => { %> 
+                    <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ 'bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
+                        <%-page+1%>
+                    </a>
+                <% }) %>
+            </section>
         </section>
     </section>
 
@@ -164,7 +256,7 @@
             </svg>
         </section>
         <section class="flex justify-center items-center flex-col w-full space-y-4 relative container max-w-screen-xl mx-auto px-6 lg:px-0 pb-12">
-            <img src="/assets/img/3D/Saly/Saly-13.png" class="max-h-72 illustration animate-float">
+            <img alt="" src="/assets/img/3D/Saly/Saly-13.png" class="max-h-72 illustration animate-float">
 
             <h2 class="font-maven-pro font-bold text-2xl text-center text-blue-900">Had Anything to Talk With Me?</h2>
             <p class="font-domine text-base md:text-lg text-center mt-5 max-w-2xl mx-auto">
@@ -176,13 +268,13 @@
             <a href="mailto:mraflymaulana@gmail.com" class="font-rubik font-bold text-lg md:text-2xl transform hover:scale-105 duration-200 ease-in" data-social="email">mraflymaulana@gmail.com</a>
 
             <section>
-                <%- include('../partials/socials'); %>
+                <%- include('../components/socials'); %>
             </section>
         </section>
     </section>
 
     <footer>
-        <%- include('../partials/footer'); %>
+        <%- include('../components/footer'); %>
     </footer>
 </body>
 

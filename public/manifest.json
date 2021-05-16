@@ -1,0 +1,32 @@
+{
+    "theme_color": "#75ACE2",
+    "background_color": "#75ACE2",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Rafly Maulana Website",
+    "short_name": "Rafly Maulana",
+    "description": "My name is Muhammad Rafly Maulana. In my 18 years of life I have experienced things like Producing Music, Graphic Designing, Fullstack Programming, etc. But one thing I always stick with is, I always do it as my passion, and that's what makes it the best.",
+    "icons": [
+        {
+            "src": "/assets/img/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
