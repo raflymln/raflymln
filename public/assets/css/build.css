@@ -1,12 +1,9 @@
 @tailwind base;
 @tailwind components;
+
 html,
 body {
     @apply relative overflow-x-hidden;
-}
-
-::-moz-selection {
-    @apply bg-blue-300 text-white;
 }
 
 ::selection {
@@ -30,23 +27,13 @@ img {
 }
 
 .btn {
-    @apply ease-in duration-200 cursor-pointer;
+    @apply ease-in duration-200 cursor-pointer hover:border-b-0 hover:translate-y-1 hover:drop-shadow-none;
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.2));
 }
 
-.btn:hover {
-    @apply border-b-0;
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    transform: translateY(4px);
-}
-
 .illustration {
-    @apply ease-in duration-200 cursor-pointer;
+    @apply ease-in duration-200 cursor-pointer transform hover:scale-105;
     filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.2));
-}
-
-.illustration:hover {
-    transform: scale(1.05);
 }
 
 .cloud-slow {
@@ -109,5 +96,6 @@ img {
         filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.2));
     }
 }
+
 @tailwind utilities;
 @tailwind screens;
