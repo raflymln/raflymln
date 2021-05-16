@@ -24,7 +24,7 @@ app.post("/git/update", (req, res) => {
 
     if (validateSignature(req, process.env.GITHUB_WEBHOOK_SECRET)) {
         log("Github", "Webhook Signature Validated");
-        execute(pkg.scripts.reload);
+        execute("cd /var/www/raflymaulana && npm run reload");
         return res.sendStatus(200);
     } else {
         log("Github", "Webhook Signature Invalid");
