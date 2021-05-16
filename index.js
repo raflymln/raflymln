@@ -61,4 +61,4 @@ app.get("/social/:social", (req, res) => {
     return res.redirect(social(req.params.social));
 });
 
-server.listen(5000, () => log("SYSTEM", "Process is Now Online on Port 3000!"));
+server.listen(3000, () => log("SYSTEM", "Process is Now Online on Port 3000!"));
