@@ -179,7 +179,7 @@
                         before. Hope you like it!</p>
                     <section id="pagination" class="flex flex-row space-x-3 justify-end mt-4">
                         <% projects.map((project, page)=> { %> 
-                            <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ 'bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
+                            <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ '!bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
                                 <%-page+1%>
                             </a>
                         <% }) %>
@@ -240,7 +240,7 @@
         <section class="w-full mx-auto relative z-50">
             <section id="pagination2" class="flex flex-row space-x-3 justify-center items-center mt-4">
                 <% projects.map((project, page) => { %> 
-                    <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ 'bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
+                    <a class="h-9 w-9 flex items-center justify-center bg-white text-lg font-rubik font-bold text-center text-blue-400 rounded-md cursor-pointer transform hover:scale-105" :class="{ '!bg-blue-700': tab === 'page<%-page%>' }" @click="tab = 'page<%-page%>'">
                         <%-page+1%>
                     </a>
                 <% }) %>

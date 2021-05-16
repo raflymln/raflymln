@@ -27,7 +27,7 @@ img {
 }
 
 .btn {
-    @apply ease-in duration-200 cursor-pointer hover:border-b-0 hover:translate-y-1 hover:drop-shadow-none;
+    @apply ease-in duration-200 cursor-pointer hover:border-b-0 transform hover:translate-y-1 hover:drop-shadow-none;
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.2));
 }
 
