@@ -26,6 +26,10 @@ img {
     @apply bg-blue-300 rounded-3xl border-b-4 py-12 border-blue-400 drop-shadow-lg !important;
 }
 
+.links-modal > section > h1 {
+    text-shadow: -2px 7px 13px rgba(0, 0, 0, 0.19);
+}
+
 .btn {
     @apply ease-in duration-200 cursor-pointer hover:border-b-0 transform hover:translate-y-1 hover:drop-shadow-none;
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.2));
@@ -54,6 +58,10 @@ img {
 .cloud-super-slow {
     @apply w-[295px];
     animation-duration: 20.5s;
+}
+
+#navigation {
+    transition: background-color 500ms linear;
 }
 
 #cta > a > div > section > h1,
