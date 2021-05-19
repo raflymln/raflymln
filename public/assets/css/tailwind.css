@@ -656,11 +656,14 @@ img {
 .btn:hover {
 	--tw-translate-y: 0.25rem;
 	border-bottom-width: 0px;
-	--tw-drop-shadow: drop-shadow(0 0 #0000);
 }
 
 .btn {
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.2));
+}
+
+.btn:hover {
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) !important;
 }
 
 .illustration {
@@ -684,6 +687,10 @@ img {
 
 .illustration {
     filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.2));
+}
+
+.illustration:hover {
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .cloud-slow {
