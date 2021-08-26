@@ -1,4 +1,4 @@
-/*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com *//*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
 Document
@@ -10,8 +10,8 @@ Use a better box model (opinionated).
 */
 
 *,
-*::before,
-*::after {
+::before,
+::after {
 	box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@ Use a better box model (opinionated).
 Use a more readable tab size (opinionated).
 */
 
-:root {
+html {
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	   tab-size: 4;
@@ -328,16 +328,6 @@ button {
   background-image: none;
 }
 
-/**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- */
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
@@ -516,11 +506,20 @@ samp {
 }
 
 /**
- * Make replaced elements `display: block` by default as that's
- * the behavior you want almost all of the time. Inspired by
- * CSS Remedy, with `svg` added as well.
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
  *
- * https://github.com/mozdevs/cssremedy/issues/14
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 
 img,
@@ -531,8 +530,8 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
-  vertical-align: middle;
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
 }
 
 /**
@@ -548,14 +547,37 @@ video {
   height: auto;
 }
 
-* {
-	--tw-shadow: 0 0 #0000;
-	--tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-	--tw-ring-offset-width: 0px;
-	--tw-ring-offset-color: #fff;
-	--tw-ring-color: rgba(90, 143, 205, 0.5);
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+	--tw-rotate: 0;
+	--tw-skew-x: 0;
+	--tw-skew-y: 0;
+	--tw-scale-x: 1;
+	--tw-scale-y: 1;
+	--tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	border-color: currentColor;
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
+	--tw-shadow: 0 0 #0000;
+	--tw-blur: var(--tw-empty,/*!*/ /*!*/);
+	--tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+	--tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+	--tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+	--tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-invert: var(--tw-empty,/*!*/ /*!*/);
+	--tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+	--tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+	--tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+	--tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .container {
 	width: 100%;
@@ -632,6 +654,7 @@ img {
 	padding-top: 3rem !important;
 	padding-bottom: 3rem !important;
 	--tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1)) !important;
+	filter: var(--tw-filter) !important;
 	--ta-filter-size: 0px 0px 8px !important;
 }
 
@@ -640,14 +663,7 @@ img {
 }
 
 .btn {
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: var(--tw-transform);
 	cursor: pointer;
 	transition-duration: 200ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
@@ -655,6 +671,7 @@ img {
 
 .btn:hover {
 	--tw-translate-y: 0.25rem;
+	transform: var(--tw-transform);
 	border-bottom-width: 0px;
 }
 
@@ -667,14 +684,7 @@ img {
 }
 
 .illustration {
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: var(--tw-transform);
 	cursor: pointer;
 	transition-duration: 200ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
@@ -683,6 +693,7 @@ img {
 .illustration:hover {
 	--tw-scale-x: 1.05;
 	--tw-scale-y: 1.05;
+	transform: var(--tw-transform);
 }
 
 .illustration {
@@ -724,10 +735,6 @@ img {
 #cta > a > div > section > h1, #cta > a > div > section > img {
 	transition-duration: 75ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
-#cta > a > div > section > h1,
-#cta > a > div > section > img {
     filter: drop-shadow(11px 11px 16px rgba(0, 0, 0, 0.212));
 }
 
@@ -1135,14 +1142,7 @@ img {
 }
 
 .transform {
-	--tw-translate-x: 0;
-	--tw-translate-y: 0;
-	--tw-rotate: 0;
-	--tw-skew-x: 0;
-	--tw-skew-y: 0;
-	--tw-scale-x: 1;
-	--tw-scale-y: 1;
-	transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: var(--tw-transform);
 }
 
 @-webkit-keyframes moveclouds {
@@ -1235,12 +1235,12 @@ img {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-col {
-	flex-direction: column;
-}
-
 .flex-row {
 	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
 }
 
 .flex-col-reverse {
@@ -1251,28 +1251,28 @@ img {
 	flex-wrap: wrap;
 }
 
-.items-center {
-	align-items: center;
-}
-
 .items-start {
 	align-items: flex-start;
 }
 
-.justify-center {
-	justify-content: center;
+.items-center {
+	align-items: center;
 }
 
 .justify-start {
 	justify-content: flex-start;
 }
 
-.justify-between {
-	justify-content: space-between;
-}
-
 .justify-end {
 	justify-content: flex-end;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
 }
 
 .gap-4 {
@@ -1331,16 +1331,16 @@ img {
 	margin-bottom: calc(6rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+	overflow: hidden;
+}
+
 .overflow-visible {
 	overflow: visible;
 }
 
 .overflow-x-hidden {
 	overflow-x: hidden;
-}
-
-.overflow-hidden {
-	overflow: hidden;
 }
 
 .overflow-ellipsis {
@@ -1685,6 +1685,7 @@ img {
 
 .drop-shadow-md {
 	--tw-drop-shadow: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+	filter: var(--tw-filter);
 }
 
 .transition-all {
@@ -1723,10 +1724,12 @@ img {
 .hover\:scale-105:hover {
 	--tw-scale-x: 1.05;
 	--tw-scale-y: 1.05;
+	transform: var(--tw-transform);
 }
 .hover\:scale-110:hover {
 	--tw-scale-x: 1.1;
 	--tw-scale-y: 1.1;
+	transform: var(--tw-transform);
 }
 .hover\:opacity-80:hover {
 	opacity: 0.8;
@@ -1816,12 +1819,12 @@ img {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	.md\:flex-col {
-		flex-direction: column;
-	}
-
 	.md\:flex-row {
 		flex-direction: row;
+	}
+
+	.md\:flex-col {
+		flex-direction: column;
 	}
 
 	.md\:items-start {

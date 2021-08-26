@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "reload": "cd /var/www/raflymaulana && git stash && git pull && npm i && pm2 restart all",
-        "build": "TAILWIND_MODE=build NODE_ENV=production node_modules/.bin/postcss ./public/assets/css/build.css -o ./public/assets/css/tailwind.css",
-        "build:dev": "set TAILWIND_MODE=build & set NODE_ENV=production & postcss ./public/assets/css/build.css -o ./public/assets/css/tailwind.css"
+        "reload": "cd /var/www/raflymaulana && git stash && git pull && yarn && pm2 restart all",
+        "build": "set TAILWIND_MODE=build & set NODE_ENV=production & postcss ./public/assets/css/build.css -o ./public/assets/css/tailwind.css",
+        "build:dev": "set TAILWIND_MODE=build & set NODE_ENV=development & postcss ./public/assets/css/build.css -o ./public/assets/css/tailwind.css"
     },
     "repository": {
         "type": "git",
