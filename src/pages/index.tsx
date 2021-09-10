@@ -11,7 +11,7 @@ const Projects = () => {
         {
             href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
             type: "Fullstack Development",
-            image: "/images/projects/RaflyMaulana-V1.webp",
+            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/67f1cb127108847.613b061966bf1.png",
             title: "Rafly Maulana V2",
             description: "2nd Version of the Personal Portofolio Site",
         },
