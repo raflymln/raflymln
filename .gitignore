@@ -1,2 +1,7 @@
 /node_modules
+/build
+
 .env
+
+public/sw.js
+public/workbox-*.js
