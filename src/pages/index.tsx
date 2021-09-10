@@ -8,10 +8,16 @@ import * as Images from "@/components/Images";
 
 const Projects = () => {
     const ProjectList = [
-        { href: "#0", type: "UI/UX", image: "/images/projects/YKB-JABAR.webp", title: "Yayasan Kemala Bhayangkari Jawa Barat", description: "YKB POLDA JABAR" },
-        { href: "#0", type: "Fullstack Development", image: "/images/projects/RaflyMaulana-V1.webp", title: "Rafly Maulana V2", description: "2nd Version of the Personal Portofolio Site" },
+        {
+            href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
+            type: "Fullstack Development",
+            image: "/images/projects/RaflyMaulana-V1.webp",
+            title: "Rafly Maulana V2",
+            description: "2nd Version of the Personal Portofolio Site",
+        },
         { href: "#0", type: "Fullstack Development", image: "/images/projects/RaflyMaulana-V2.webp", title: "Rafly Maulana", description: "Personal Portofolio Site" },
         { href: "#0", type: "UI/UX", image: "/images/projects/Foxxy-Indonesia.webp", title: "Foxxy Indonesia", description: "A hosting service, dedicated to games" },
+        { href: "#0", type: "UI/UX", image: "/images/projects/YKB-JABAR.webp", title: "Yayasan Kemala Bhayangkari Jawa Barat", description: "YKB POLDA JABAR" },
     ];
 
     const ref: MutableRefObject<any> = useRef(null);
