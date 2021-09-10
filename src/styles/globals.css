@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Baloo;
+        src: url(/fonts/baloo/regular.ttf);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Somatic;
+        src: url(/fonts/somatic/regular.otf);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Comfortaa;
+        font-weight: 300;
+        src: url(/fonts/comfortaa/light.ttf);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Comfortaa;
+        font-weight: 400;
+        src: url(/fonts/comfortaa/regular.ttf);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Comfortaa;
+        font-weight: 700;
+        src: url(/fonts/comfortaa/bold.ttf);
+        font-display: swap;
+    }
+
+    * {
+        scroll-behavior: smooth;
+        @apply box-border;
+    }
+
+    ::selection {
+        @apply bg-theme-green-light bg-blend-difference text-white;
+    }
+
+    ::-moz-selection {
+        @apply bg-theme-green-light bg-blend-difference text-white;
+    }
+
+    html,
+    body {
+        @apply overflow-x-hidden;
+    }
+}
+
+@layer components {
+    .btn > span {
+        @apply block rounded-3.5 px-10 py-3 transform translate-y-[-4px] hover:translate-y-0 font-baloo text-lg leading-7 tracking-wide duration-200 ease-in-out;
+    }
+
+    .container {
+        @apply max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto;
+    }
+}
