@@ -45,8 +45,10 @@ app.get("/social/:social", (req, res) => {
                 return "https://www.linkedin.com/in/raflymln/";
             case "dribbble":
                 return "https://dribbble.com/raflymln";
+            case "behance":
+                return "https://www.behance.net/raflymln";
             case "soundcloud":
-                return "https://soundcloud.com/rafly_maulana";
+                return "https://soundcloud.com/raflymln";
             case "spotify":
                 return "https://open.spotify.com/artist/7AT29mk5bZImdbEgdp7w2q";
             case "youtube":
