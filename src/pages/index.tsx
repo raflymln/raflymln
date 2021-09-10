@@ -12,12 +12,24 @@ const Projects = () => {
             href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
             type: "Fullstack Development",
             image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/67f1cb127108847.613b061966bf1.png",
-            title: "Rafly Maulana V2",
-            description: "2nd Version of the Personal Portofolio Site",
+            title: "Rafly Maulana V1",
+            description: "1st version of my portofolio site",
         },
-        { href: "#0", type: "Fullstack Development", image: "/images/projects/RaflyMaulana-V2.webp", title: "Rafly Maulana", description: "Personal Portofolio Site" },
-        { href: "#0", type: "UI/UX", image: "/images/projects/Foxxy-Indonesia.webp", title: "Foxxy Indonesia", description: "A hosting service, dedicated to games" },
-        { href: "#0", type: "UI/UX", image: "/images/projects/YKB-JABAR.webp", title: "Yayasan Kemala Bhayangkari Jawa Barat", description: "YKB POLDA JABAR" },
+        {
+            href: "https://www.behance.net/gallery/127122741/Project-V2-Portfolio-Website-Design",
+            type: "Fullstack Development",
+            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/0975b6127122741.613b476c7696b.png",
+            title: "Rafly Maulana V2",
+            description: "2nd version of my portofolio site",
+        },
+        {
+            href: "https://www.behance.net/gallery/127128767/Project-Foxxy-Game-Hosting",
+            type: "UI/UX",
+            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/2e5d45127128767.613b5f499112e.png",
+            title: "Foxxy Indonesia",
+            description: "A hosting service, dedicated to games",
+        },
+        { href: "#0", type: "UI/UX", image: "/images/projects/YKB-JABAR.webp", title: "Yayasan Kemala Bhayangkari Jawa Barat", description: "Yayasan Kemala Bhayangkari Polda Jabar" },
     ];
 
     const ref: MutableRefObject<any> = useRef(null);
