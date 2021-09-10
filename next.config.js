@@ -1,14 +1,11 @@
 const nextImages = require("next-images");
-// const nextPWA = require("next-pwa");
+const nextPWA = require("next-pwa");
 
 const runtimeCaching = require("next-pwa/cache");
 const path = require("path");
 
 const config = {
-    plugins: [
-        nextImages,
-        // nextPWA
-    ],
+    plugins: [nextImages, nextPWA],
     settings: {
         reactStrictMode: true,
         distDir: "build",
