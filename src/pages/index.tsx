@@ -29,7 +29,13 @@ const Projects = () => {
             title: "Foxxy Indonesia",
             description: "A hosting service, dedicated to games",
         },
-        { href: "#0", type: "UI/UX", image: "/images/projects/YKB-JABAR.webp", title: "Yayasan Kemala Bhayangkari Jawa Barat", description: "Yayasan Kemala Bhayangkari Polda Jabar" },
+        {
+            href: "https://drive.google.com/drive/folders/1UDQa3XFEwL2TBOplVRnT67uG8UpIENHV?usp=sharing",
+            type: "Website Development",
+            image: "/images/projects/ykb-jabar.png",
+            title: "Yayasan Kemala Bhayangkari Jawa Barat",
+            description: "Yayasan Kemala Bhayangkari Polda Jabar",
+        },
     ];
 
     const ref: MutableRefObject<any> = useRef(null);
