@@ -23,10 +23,17 @@ const Projects = () => {
             description: "2nd version of my portofolio site",
         },
         {
+            href: "https://www.behance.net/gallery/127174313/Project-Foxxy-E-Commerce",
+            type: "Website Development",
+            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c4720d127174313.613c74156d3b4.png",
+            title: "Foxxy E-Commerce",
+            description: "A marketplace for every digital items",
+        },
+        {
             href: "https://www.behance.net/gallery/127128767/Project-Foxxy-Game-Hosting",
             type: "UI/UX",
             image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/2e5d45127128767.613b5f499112e.png",
-            title: "Foxxy Indonesia",
+            title: "Foxxy Game Hosting",
             description: "A hosting service, dedicated to games",
         },
         {
