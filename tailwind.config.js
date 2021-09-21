@@ -125,6 +125,85 @@ module.exports = {
                         "background-color": "rgba(0, 0, 0, 0)",
                     },
                 },
+                "bird-fly-cycle": {
+                    "100%": {
+                        "background-position": "-900px 0",
+                    },
+                },
+                "bird-fly": {
+                    "0%": {
+                        transform: "scale(0.3) translateX(-10vw)",
+                    },
+                    "10%": {
+                        transform: "translateY(2vh) translateX(10vw) scale(0.4)",
+                    },
+                    "20%": {
+                        transform: "translateY(0vh) translateX(30vw) scale(0.5)",
+                    },
+                    "30%": {
+                        transform: "translateY(4vh) translateX(50vw) scale(0.6)",
+                    },
+                    "40%": {
+                        transform: "translateY(2vh) translateX(70vw) scale(0.6)",
+                    },
+                    "50%": {
+                        transform: "translateY(0vh) translateX(90vw) scale(0.6)",
+                    },
+                    "60%": {
+                        transform: "translateY(0vh) translateX(110vw) scale(0.6)",
+                    },
+                    "100%": {
+                        transform: "translateY(0vh) translateX(110vw) scale(0.6)",
+                    },
+                },
+                "seaweed-1": {
+                    "0%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+
+                    "50%": {
+                        transform: "scale(1.05) rotate(5deg)",
+                    },
+
+                    "100%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                },
+                "seaweed-2": {
+                    "0%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+
+                    "50%": {
+                        transform: "scale(1.03) rotate(-2deg)",
+                    },
+
+                    "100%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                },
+                "tree-1": {
+                    "0%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                    "50%": {
+                        transform: "scale(1.02) rotate(1.5deg)",
+                    },
+                    "100%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                },
+                "tree-2": {
+                    "0%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                    "50%": {
+                        transform: "scale(1.02) rotate(-1.5deg)",
+                    },
+                    "100%": {
+                        transform: "scale(1) rotate(0deg)",
+                    },
+                },
             },
             animation: {
                 wave: "wave 2.5s infinite",
@@ -139,7 +218,7 @@ module.exports = {
         ({ addComponents }) => {
             addComponents({
                 ".container": {
-                    "@apply max-w-xl xl:max-w-6xl mx-auto": {},
+                    "@apply max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto": {},
                 },
                 ".btn": {
                     "@apply rounded-[30px] focus:opacity-80 cursor-pointer": {},

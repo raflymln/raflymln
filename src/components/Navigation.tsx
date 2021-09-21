@@ -10,15 +10,17 @@ const NavLink = ({ children, ...props }: any) => {
     if (router.pathname === props.href) {
         return (
             <Link href={props.href}>
-                <a className={`bg-white rounded-3.5 px-4 py-1 hover:opacity-70 duration-200 ${props.className}`}>
+                <a className={`bg-white rounded-3.5 px-4 py-1 hover:opacity-70 duration-200 ${props.className}`} {...props}>
                     <h3 className="font-baloo text-3xl md:text-lg text-theme-green-light">{children}</h3>
                 </a>
             </Link>
         );
     } else {
         return (
-            <Link href={props.href}>
-                <a className={`font-baloo text-3xl md:text-xl text-white hover:opacity-70 duration-200 ${props.className}`}>{children}</a>
+            <Link href={props.href} passHref>
+                <a className={`font-baloo text-3xl md:text-xl text-white hover:opacity-70 duration-200 ${props.className}`} {...props}>
+                    {children}
+                </a>
             </Link>
         );
     }
@@ -27,9 +29,15 @@ const NavLink = ({ children, ...props }: any) => {
 const Menu = () => {
     return (
         <>
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="#about">About Me</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="/" data-aos="bounce">
+                Home
+            </NavLink>
+            <NavLink href="#about" data-aos="bounce" style={{ animationDelay: ".2s" }}>
+                About Me
+            </NavLink>
+            <NavLink href="#contact" data-aos="bounce" style={{ animationDelay: ".4s" }}>
+                Contact
+            </NavLink>
         </>
     );
 };
@@ -40,20 +48,19 @@ export default function Navigation() {
     return (
         <>
             {/* Desktop Menu */}
-            <nav
+            <div
                 className="relative w-max rounded-3.5 hidden md:flex flex-row justify-center items-center py-3 px-6 bg-theme-green-light space-x-4 animate-[navigation-pulse]"
-                style={{ animationIterationCount: "infinite", animationDuration: "2s" }}
-                data-aos="fade-down">
+                style={{ animationIterationCount: "infinite", animationDuration: "2s" }}>
                 <section className="h-12 w-12 p-1 rounded-full bg-white">
                     <img src={Images.Logo} alt="Logo" className="h-full w-auto transform scale-x-[-1]" />
                 </section>
 
                 <Menu />
-            </nav>
+            </div>
 
             {/* Mobile Menu */}
-            <section className="md:hidden">
-                <nav
+            <section className="md:hidden relative z-[999]">
+                <div
                     className="relative w-max rounded-3.5 flex flex-row justify-center items-center py-3 px-6 bg-theme-green-light space-x-4 animate-[navigation-pulse]"
                     style={{ animationIterationCount: "infinite", animationDuration: "2s" }}
                     onClick={() => showMenu(true)}
@@ -61,10 +68,10 @@ export default function Navigation() {
                     <section className="h-12 w-12 p-1 rounded-full bg-white">
                         <img src={Images.Logo} alt="Logo" className="h-full w-auto transform scale-x-[-1]" />
                     </section>
-                    <NavLink href="#0" className="!text-xl tracking-wider">
+                    <NavLink href="#0" className="!text-xl tracking-wider font-baloo text-white">
                         Menu
                     </NavLink>
-                </nav>
+                </div>
 
                 {menuOpened && (
                     <div className="fixed left-0 top-0 w-screen h-screen bg-theme-green-light z-[999] flex flex-col items-center justify-center space-y-4" data-aos="fade-up">

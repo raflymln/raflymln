@@ -25,7 +25,7 @@ export default function Footer() {
                     <article
                         className="w-full max-w-6xl flex flex-col lg:flex-row justify-center items-center px-10 py-9 mx-auto text-white rounded-3.5 space-y-10 lg:space-y-0 lg:space-x-14 "
                         style={{ background: "linear-gradient(91.13deg, #57A773 0%, #157145 100%)" }}
-                        data-aos="flip-up">
+                        data-aos="flipInX">
                         <div className="space-y-4 text-center lg:text-left">
                             <h1 className="font-baloo text-4xl">I’m available for every opportunity!</h1>
                             <p className="font-comfortaa text-sm leading-6">Interested in working with me? Need help on your project? Or just wanna say hi? I’d love to hear you about that.</p>
@@ -43,7 +43,7 @@ export default function Footer() {
                     </article>
 
                     {/* Social Links */}
-                    <article className="relative flex flex-row flex-wrap justify-center items-center space-x-4" data-aos="fade-right">
+                    <article className="relative flex flex-row flex-wrap justify-center items-center space-x-4" data-aos="tada">
                         <SocialLink id="instagram" href="https://www.instagram.com/raflymln_">
                             <svg className="mix-blend-hard-light text-black fill-current opacity-75" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -85,7 +85,7 @@ export default function Footer() {
 
             {/* Illustrations */}
             <section id="illustration">
-                <div className="absolute bottom-52 lg:bottom-10 left-0 w-full h-full z-10" data-aos="fade-right">
+                <div className="absolute bottom-52 lg:bottom-10 left-0 w-full h-full z-10" data-aos="lightSpeedInLeft">
                     <div className="relative container w-full h-full flex items-center z-10">
                         <svg className="absolute bottom-72 md:bottom-0 left-0 h-72 md:h-128" viewBox="0 0 517 517" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

@@ -1,6 +1,6 @@
 {
     "name": "raflymaulana",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Personal Portofolio Website of Rafly Maulana",
     "main": "index.js",
     "repository": "https://github.com/raflymln/raflymaulana.git",
@@ -20,6 +20,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "aos": "^2.3.4",
         "next": "latest",
         "next-images": "^1.8.1",

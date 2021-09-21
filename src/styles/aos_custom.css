@@ -1,0 +1,298 @@
+[data-aos] {
+    opacity: 0;
+}
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+[data-aos="bounce"].aos-animate {
+    animation: bounce 1.5s;
+}
+[data-aos="flash"].aos-animate {
+    animation: flash 1.5s;
+}
+[data-aos="pulse"].aos-animate {
+    animation: pulse 1.5s;
+}
+[data-aos="rubberBand"].aos-animate {
+    animation: rubberBand 1.5s;
+}
+[data-aos="shakeX"].aos-animate {
+    animation: shakeX 1.5s;
+}
+[data-aos="shakeY"].aos-animate {
+    animation: shakeY 1.5s;
+}
+[data-aos="headShake"].aos-animate {
+    animation: headShake 1.5s;
+}
+[data-aos="swing"].aos-animate {
+    animation: swing 1.5s;
+}
+[data-aos="tada"].aos-animate {
+    animation: tada 1.5s;
+}
+[data-aos="wobble"].aos-animate {
+    animation: wobble 1.5s;
+}
+[data-aos="jello"].aos-animate {
+    animation: jello 1.5s;
+}
+[data-aos="heartBeat"].aos-animate {
+    animation: heartBeat 1.5s;
+}
+[data-aos="backInDown"].aos-animate {
+    animation: backInDown 1.5s;
+}
+[data-aos="backInLeft"].aos-animate {
+    animation: backInLeft 1.5s;
+}
+[data-aos="backInRight"].aos-animate {
+    animation: backInRight 1.5s;
+}
+[data-aos="backInUp"].aos-animate {
+    animation: backInUp 1.5s;
+}
+[data-aos="backOutDown"].aos-animate {
+    animation: backOutDown 1.5s;
+}
+[data-aos="backOutLeft"].aos-animate {
+    animation: backOutLeft 1.5s;
+}
+[data-aos="backOutRight"].aos-animate {
+    animation: backOutRight 1.5s;
+}
+[data-aos="backOutUp"].aos-animate {
+    animation: backOutUp 1.5s;
+}
+[data-aos="bounceIn"].aos-animate {
+    animation: bounceIn 1.5s;
+}
+[data-aos="bounceInDown"].aos-animate {
+    animation: bounceInDown 1.5s;
+}
+[data-aos="bounceInLeft"].aos-animate {
+    animation: bounceInLeft 1.5s;
+}
+[data-aos="bounceInRight"].aos-animate {
+    animation: bounceInRight 1.5s;
+}
+[data-aos="bounceInUp"].aos-animate {
+    animation: bounceInUp 1.5s;
+}
+[data-aos="bounceOut"].aos-animate {
+    animation: bounceOut 1.5s;
+}
+[data-aos="bounceOutDown"].aos-animate {
+    animation: bounceOutDown 1.5s;
+}
+[data-aos="bounceOutLeft"].aos-animate {
+    animation: bounceOutLeft 1.5s;
+}
+[data-aos="bounceOutRight"].aos-animate {
+    animation: bounceOutRight 1.5s;
+}
+[data-aos="bounceOutUp"].aos-animate {
+    animation: bounceOutUp 1.5s;
+}
+[data-aos="fadeIn"].aos-animate {
+    animation: fadeIn 1.5s;
+}
+[data-aos="fadeInDown"].aos-animate {
+    animation: fadeInDown 1.5s;
+}
+[data-aos="fadeInDownBig"].aos-animate {
+    animation: fadeInDownBig 1.5s;
+}
+[data-aos="fadeInLeft"].aos-animate {
+    animation: fadeInLeft 1.5s;
+}
+[data-aos="fadeInLeftBig"].aos-animate {
+    animation: fadeInLeftBig 1.5s;
+}
+[data-aos="fadeInRight"].aos-animate {
+    animation: fadeInRight 1.5s;
+}
+[data-aos="fadeInRightBig"].aos-animate {
+    animation: fadeInRightBig 1.5s;
+}
+[data-aos="fadeInUp"].aos-animate {
+    animation: fadeInUp 1.5s;
+}
+[data-aos="fadeInUpBig"].aos-animate {
+    animation: fadeInUpBig 1.5s;
+}
+[data-aos="fadeInTopLeft"].aos-animate {
+    animation: fadeInTopLeft 1.5s;
+}
+[data-aos="fadeInTopRight"].aos-animate {
+    animation: fadeInTopRight 1.5s;
+}
+[data-aos="fadeInBottomLeft"].aos-animate {
+    animation: fadeInBottomLeft 1.5s;
+}
+[data-aos="fadeInBottomRight"].aos-animate {
+    animation: fadeInBottomRight 1.5s;
+}
+[data-aos="fadeOut"].aos-animate {
+    animation: fadeOut 1.5s;
+}
+[data-aos="fadeOutDown"].aos-animate {
+    animation: fadeOutDown 1.5s;
+}
+[data-aos="fadeOutDownBig"].aos-animate {
+    animation: fadeOutDownBig 1.5s;
+}
+[data-aos="fadeOutLeft"].aos-animate {
+    animation: fadeOutLeft 1.5s;
+}
+[data-aos="fadeOutLeftBig"].aos-animate {
+    animation: fadeOutLeftBig 1.5s;
+}
+[data-aos="fadeOutRight"].aos-animate {
+    animation: fadeOutRight 1.5s;
+}
+[data-aos="fadeOutRightBig"].aos-animate {
+    animation: fadeOutRightBig 1.5s;
+}
+[data-aos="fadeOutUp"].aos-animate {
+    animation: fadeOutUp 1.5s;
+}
+[data-aos="fadeOutUpBig"].aos-animate {
+    animation: fadeOutUpBig 1.5s;
+}
+[data-aos="fadeOutTopLeft"].aos-animate {
+    animation: fadeOutTopLeft 1.5s;
+}
+[data-aos="fadeOutTopRight"].aos-animate {
+    animation: fadeOutTopRight 1.5s;
+}
+[data-aos="fadeOutBottomRight"].aos-animate {
+    animation: fadeOutBottomRight 1.5s;
+}
+[data-aos="fadeOutBottomLeft"].aos-animate {
+    animation: fadeOutBottomLeft 1.5s;
+}
+[data-aos="flip"].aos-animate {
+    animation: flip 1.5s;
+}
+[data-aos="flipInX"].aos-animate {
+    animation: flipInX 1.5s;
+}
+[data-aos="flipInY"].aos-animate {
+    animation: flipInY 1.5s;
+}
+[data-aos="flipOutX"].aos-animate {
+    animation: flipOutX 1.5s;
+}
+[data-aos="flipOutY"].aos-animate {
+    animation: flipOutY 1.5s;
+}
+[data-aos="lightSpeedInRight"].aos-animate {
+    animation: lightSpeedInRight 1.5s;
+}
+[data-aos="lightSpeedInLeft"].aos-animate {
+    animation: lightSpeedInLeft 1.5s;
+}
+[data-aos="lightSpeedOutRight"].aos-animate {
+    animation: lightSpeedOutRight 1.5s;
+}
+[data-aos="lightSpeedOutLeft"].aos-animate {
+    animation: lightSpeedOutLeft 1.5s;
+}
+[data-aos="rotateIn"].aos-animate {
+    animation: rotateIn 1.5s;
+}
+[data-aos="rotateInDownLeft"].aos-animate {
+    animation: rotateInDownLeft 1.5s;
+}
+[data-aos="rotateInDownRight"].aos-animate {
+    animation: rotateInDownRight 1.5s;
+}
+[data-aos="rotateInUpLeft"].aos-animate {
+    animation: rotateInUpLeft 1.5s;
+}
+[data-aos="rotateInUpRight"].aos-animate {
+    animation: rotateInUpRight 1.5s;
+}
+[data-aos="rotateOut"].aos-animate {
+    animation: rotateOut 1.5s;
+}
+[data-aos="rotateOutDownLeft"].aos-animate {
+    animation: rotateOutDownLeft 1.5s;
+}
+[data-aos="rotateOutDownRight"].aos-animate {
+    animation: rotateOutDownRight 1.5s;
+}
+[data-aos="rotateOutUpLeft"].aos-animate {
+    animation: rotateOutUpLeft 1.5s;
+}
+[data-aos="rotateOutUpRight"].aos-animate {
+    animation: rotateOutUpRight 1.5s;
+}
+[data-aos="hinge"].aos-animate {
+    animation: hinge 1.5s;
+}
+[data-aos="jackInTheBox"].aos-animate {
+    animation: jackInTheBox 1.5s;
+}
+[data-aos="rollIn"].aos-animate {
+    animation: rollIn 1.5s;
+}
+[data-aos="rollOut"].aos-animate {
+    animation: rollOut 1.5s;
+}
+[data-aos="zoomIn"].aos-animate {
+    animation: zoomIn 1.5s;
+}
+[data-aos="zoomInDown"].aos-animate {
+    animation: zoomInDown 1.5s;
+}
+[data-aos="zoomInLeft"].aos-animate {
+    animation: zoomInLeft 1.5s;
+}
+[data-aos="zoomInRight"].aos-animate {
+    animation: zoomInRight 1.5s;
+}
+[data-aos="zoomInUp"].aos-animate {
+    animation: zoomInUp 1.5s;
+}
+[data-aos="zoomOut"].aos-animate {
+    animation: zoomOut 1.5s;
+}
+[data-aos="zoomOutDown"].aos-animate {
+    animation: zoomOutDown 1.5s;
+}
+[data-aos="zoomOutLeft"].aos-animate {
+    animation: zoomOutLeft 1.5s;
+}
+[data-aos="zoomOutRight"].aos-animate {
+    animation: zoomOutRight 1.5s;
+}
+[data-aos="zoomOutUp"].aos-animate {
+    animation: zoomOutUp 1.5s;
+}
+[data-aos="slideInDown"].aos-animate {
+    animation: slideInDown 1.5s;
+}
+[data-aos="slideInLeft"].aos-animate {
+    animation: slideInLeft 1.5s;
+}
+[data-aos="slideInRight"].aos-animate {
+    animation: slideInRight 1.5s;
+}
+[data-aos="slideInUp"].aos-animate {
+    animation: slideInUp 1.5s;
+}
+[data-aos="slideOutDown"].aos-animate {
+    animation: slideOutDown 1.5s;
+}
+[data-aos="slideOutLeft"].aos-animate {
+    animation: slideOutLeft 1.5s;
+}
+[data-aos="slideOutRight"].aos-animate {
+    animation: slideOutRight 1.5s;
+}
+[data-aos="slideOutUp"].aos-animate {
+    animation: slideOutUp 1.5s;
+}

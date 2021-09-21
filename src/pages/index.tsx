@@ -6,40 +6,44 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import * as Images from "@/components/Images";
 
+import { Seaweed1, Seaweed2 } from "@/components/illustrations/Seaweed";
+import { HalfTree1, HalfTree2 } from "@/components/illustrations/HalfTree";
+import AboutMeIllustration from "@/components/illustrations/AboutMe";
+
 const Projects = () => {
     const ProjectList = [
         {
             href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
             type: "Fullstack Development",
-            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/67f1cb127108847.613b061966bf1.png",
+            image: "/images/projects/RaflyMaulanaV1.webp",
             title: "Rafly Maulana V1",
             description: "1st version of my portofolio site",
         },
         {
             href: "https://www.behance.net/gallery/127122741/Project-V2-Portfolio-Website-Design",
             type: "Fullstack Development",
-            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/0975b6127122741.613b476c7696b.png",
+            image: "/images/projects/RaflyMaulanaV2.webp",
             title: "Rafly Maulana V2",
             description: "2nd version of my portofolio site",
         },
         {
             href: "https://www.behance.net/gallery/127174313/Project-Foxxy-E-Commerce",
             type: "Website Development",
-            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c4720d127174313.613c74156d3b4.png",
+            image: "/images/projects/FoxxyECommerce.webp",
             title: "Foxxy E-Commerce",
             description: "A marketplace for every digital items",
         },
         {
             href: "https://www.behance.net/gallery/127128767/Project-Foxxy-Game-Hosting",
             type: "UI/UX",
-            image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/2e5d45127128767.613b5f499112e.png",
+            image: "/images/projects/FoxxyGameHosting.webp",
             title: "Foxxy Game Hosting",
             description: "A hosting service, dedicated to games",
         },
         {
             href: "https://drive.google.com/drive/folders/1UDQa3XFEwL2TBOplVRnT67uG8UpIENHV?usp=sharing",
             type: "Website Development",
-            image: "/images/projects/ykb-jabar.png",
+            image: "/images/projects/YKBJABAR.webp",
             title: "Yayasan Kemala Bhayangkari Jawa Barat",
             description: "Yayasan Kemala Bhayangkari Polda Jabar",
         },
@@ -89,25 +93,29 @@ const Projects = () => {
         <>
             <div className="relative container w-full h-full">
                 <section className="flex flex-row justify-between items-end">
-                    <div className="text-theme-blue-dark max-w-sm" data-aos="zoom-in">
-                        <h1 className="font-baloo text-7xl">My Works</h1>
-                        <h3 className="font-somatic text-2xl leading-8 pt-2">Collection of all my projects and case studies.</h3>
+                    <div className="text-theme-blue-dark max-w-sm">
+                        <h1 className="font-baloo text-7xl" data-aos="zoom-in">
+                            My Works
+                        </h1>
+                        <h3 className="font-somatic text-2xl leading-8 pt-2" data-aos="zoom-in" data-aos-delay="200">
+                            Collection of all my projects and case studies.
+                        </h3>
 
                         <Link href="https://www.behance.net/raflymln" passHref={true}>
-                            <button className="btn bg-theme-blue-very-dark text-white mt-8">
+                            <button className="btn bg-theme-blue-very-dark text-white mt-8" data-aos="zoom-in" data-aos-delay="400">
                                 <span className="bg-theme-blue-dark">Interesting, I Want to See More!</span>
                             </button>
                         </Link>
                     </div>
 
                     <div className="space-x-4 hidden lg:block">
-                        <ScrollButton onClick={() => scroll(-300)} data-aos="zoom-in-right" aria-label="Scroll Left">
+                        <ScrollButton onClick={() => scroll(-300)} data-aos="jello" aria-label="Scroll Left">
                             <svg className="w-4 h-auto" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.9515 25.0485L14 28L-1.55445e-06 14L14 0L16.9515 2.95154L7.99046 11.9126H28V16.0874H7.99046L16.9515 25.0485Z" fill="white" />
                             </svg>
                         </ScrollButton>
 
-                        <ScrollButton onClick={() => scroll(300)} data-aos="zoom-in-left" aria-label="Scroll Right">
+                        <ScrollButton onClick={() => scroll(300)} data-aos="jello" aria-label="Scroll Right">
                             <svg className="w-4 h-auto" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
                             </svg>
@@ -132,11 +140,13 @@ const Projects = () => {
 const Content = ({ children, ...props }: any) => {
     return (
         <Link href={props.href || "#0"} passHref={true}>
-            <div className="px-10 lg:p-0 relative">
-                <div className="z-50 bg-black bg-opacity-50 flex justify-center items-center absolute left-0 top-0 h-full w-full rounded-3.5">
-                    <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
-                </div>
+            <div className="px-10 lg:p-0 relative" data-aos="rubberBand">
                 <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex items-start md:items-center justify-between flex-col-reverse md:flex-row text-theme-green-light gap-2 transform hover:scale-105 cursor-pointer duration-200 ease-in bg-gradient-to-b from-white to-theme-blue-light box-border">
+                    {/* REMOVE UNDER THIS LINE AFTER PRODUCTION */}
+                    <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
+                        <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
+                    </div>
+
                     <div className="pt-4 md:pt-0">
                         <h1 className="font-baloo text-4xl pb-1">{props.title}</h1>
                         <p className="font-comfortaa text-sm leading-6">{props.description}</p>
@@ -153,21 +163,23 @@ export default function Home() {
     return (
         <>
             <section id="intro" className="relative w-full bg-cover bg-center h-[800px] lg:h-[750px] bg-theme-blue-medium " style={{ backgroundImage: `url(${Images.MountainLandscape})` }}>
-                <div className="relative container w-full h-full flex items-center">
+                <div className="relative container w-full h-full flex items-center z-[999]">
                     <div className="absolute top-14 right-0 w-max">
                         <Navigation />
                     </div>
 
-                    <div className="max-w-sm text-black space-y-6" data-aos="fade-right">
-                        <h3 className="font-somatic text-lg md:text-2xl">
+                    <div className="max-w-sm text-black space-y-6">
+                        <h3 className="font-somatic text-lg md:text-2xl" data-aos="bounce">
                             <span className="animate-wave inline-block transform origin-bottom-right">👋</span> Hi! Welcome, I'm
                         </h3>
-                        <h1 className="font-baloo text-6xl md:text-8xl">Rafly Maulana</h1>
-                        <p className="font-comfortaa text-lg">
+                        <h1 className="font-baloo text-6xl md:text-8xl" data-aos="bounce" style={{ animationDelay: ".3s" }}>
+                            Rafly Maulana
+                        </h1>
+                        <p className="font-comfortaa text-lg" data-aos="bounce" style={{ animationDelay: ".6s" }}>
                             A <b>fullstack developer</b>, <b>designer</b>, and <b>producer</b>, from <span className="text-red-600">Indonesia</span>.
                         </p>
                         <Link href="#about" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white mt-8">
+                            <button className="btn bg-theme-green-dark text-white mt-8" data-aos="bounce" style={{ animationDelay: ".9s" }}>
                                 <span className="bg-theme-green-light">"Who Are You?"</span>
                             </button>
                         </Link>
@@ -176,35 +188,55 @@ export default function Home() {
 
                 <div className="absolute left-0 w-full bottom-14 xl:bottom-28">
                     <div className="relative xl:container w-full h-full flex items-center">
-                        <img src={Images.Logo} alt="Logo" className="absolute w-60 md:w-80 lg:w-96 h-auto right-0 z-3" data-aos="fade-up-left" />
+                        <img src={Images.Logo} alt="Logo" className="absolute w-60 md:w-80 lg:w-96 h-auto right-0 z-3" data-aos="rotateIn" />
+                    </div>
+                </div>
+
+                <div className="absolute top-0 left-0 w-full h-full z-10">
+                    <div className="bird-container" style={{ animationDuration: "15s", animationDelay: "0s" }}>
+                        <div className="bird" style={{ animationDuration: "1s", animationDelay: "-0.5s" }} />
+                    </div>
+
+                    <div className="bird-container" style={{ animationDuration: "16s", animationDelay: "1s" }}>
+                        <div className="bird" style={{ animationDuration: "0.9s", animationDelay: "-0.75s" }} />
+                    </div>
+
+                    <div className="bird-container" style={{ animationDuration: "14.6s", animationDelay: "9.5s" }}>
+                        <div className="bird" style={{ animationDuration: "1.25s", animationDelay: "-0.25s" }} />
+                    </div>
+
+                    <div className="bird-container" style={{ animationDuration: "16s", animationDelay: "10.25s" }}>
+                        <div className="bird" style={{ animationDuration: "1.1s", animationDelay: "-0.5s" }} />
                     </div>
                 </div>
             </section>
 
             <section id="about" className="relative w-full py-32">
                 <div className="relative container w-full h-full flex flex-col xl:flex-row items-start xl:items-center space-y-10 xl:space-y-0 xl:space-x-10 justify-center z-50">
-                    <img src={Images.AboutMeBox} alt="About Me" width="589" height="605" className="w-auto" data-aos="fade-right" data-aos-anchor-placement="center-bottom" />
+                    <AboutMeIllustration className="w-auto max-w-[589px] relative" data-aos="fade-up" />
 
-                    <div className="text-black space-y-8 max-w-lg 2xl:max-w-md rounded-3.5 p-0 md:p-8 2xl:p-0" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
-                        <h1 className="font-baloo text-6xl">I Learn Through Experiences</h1>
-                        <p className="font-comfortaa text-base font-regular leading-7">
-                            I’m Rafly, from <span className="text-red-400">Indonesia</span>. I’ve spent my time to take any opportunity as well as developing my experience and skills to things like
-                            Music Producing, Graphic Designing, Programming, and many others.
+                    <div className="text-black space-y-8 max-w-lg 2xl:max-w-md rounded-3.5 p-0 md:p-8 2xl:p-0 relative">
+                        <h1 className="font-baloo text-6xl" data-aos="lightSpeedInRight" data-aos-anchor-placement="center-bottom">
+                            I Learn Through Experiences
+                        </h1>
+                        <p className="font-comfortaa text-base font-regular leading-7" data-aos="fadeInDown" data-aos-anchor-placement="center-bottom">
+                            I’m Rafly, from Indonesia. I’ve spent my time to take any opportunity as well as developing my experience and skills to things like Music Producing, Graphic Designing,
+                            Programming, and many others.
                             <br />
                             <br />
                             But one thing I always stick with everything is, <b>I always do every works as my passion</b>, and that's what makes me happy also giving myself a chance to deliver best
                             works that i can do.
                         </p>
                         <Link href="http://linkedin.com/in/raflymln" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white">
+                            <button className="btn bg-theme-green-dark text-white" data-aos="jackInTheBox" data-aos-anchor-placement="center-bottom">
                                 <span className="bg-theme-green-light">Great, Now Tell Me More!</span>
                             </button>
                         </Link>
                     </div>
                 </div>
 
-                <img src={Images.HalfTree1} alt="" className="absolute left-0 -bottom-1 h-auto hidden xl:block" />
-                <img src={Images.HalfTree2} alt="" className="absolute right-0 -bottom-20 z-10 h-80 md:h-128 lg:h-auto xl:h-128 2xl:h-auto" />
+                <HalfTree1 />
+                <HalfTree2 />
             </section>
 
             <section id="content" className="relative w-full flex justify-center items-center bg-gradient-to-b from-theme-green-light to-theme-green-dark overflow-hidden">
@@ -215,7 +247,7 @@ export default function Home() {
                 </div>
 
                 <div className="mx-auto pt-16 pb-40 z-50">
-                    <h1 className="font-baloo text-white text-6xl text-center pb-12" data-aos="fade-down">
+                    <h1 className="font-baloo text-white text-6xl text-center pb-12" data-aos="bounceInDown">
                         Links & Content
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 box-border" data-aos="zoom-in">
@@ -275,10 +307,10 @@ export default function Home() {
                     </div>
                 </div>
 
-                <img src={Images.Seaweed1} alt="" className="absolute -bottom-20 lg:-bottom-10 xl:bottom-0 -left-60 md:-left-10 lg:left-20" data-aos="fade-up" />
-                <img src={Images.Seaweed2} alt="" className="absolute -bottom-20 md:-bottom-10 xl:bottom-0 -right-60 md:-right-10 lg:right-20" data-aos="fade-up" />
+                <Seaweed1 />
+                <Seaweed2 />
 
-                <div className="absolute -bottom-1 left-0 w-full">
+                <div className="absolute -bottom-2 left-0 w-full">
                     <svg className="w-full h-full" height="105" viewBox="0 0 1919 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fillRule="evenodd"
@@ -295,16 +327,16 @@ export default function Home() {
 
                 <div className="absolute left-0 -bottom-1">
                     <svg className="w-full h-full" height="404" viewBox="0 0 1919 404" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d)">
+                        <g filter="url(#aaavvv)">
                             <path
                                 fillRule="evenodd"
                                 clipRule="evenodd"
                                 d="M0 212.416L80.0417 219.913C160.083 228.243 320.167 244.069 480.25 219.913C640.334 195.757 800.417 132.451 960.5 155.774C1119.58 179.931 1279.67 292.382 1439.75 284.052C1599.83 275.722 1759.92 148.278 1839.96 84.1388L1920 20V404H1839.96C1759.92 404 1599.83 404 1439.75 404C1279.67 404 1119.58 404 960.5 404C800.417 404 640.334 404 480.25 404C320.167 404 160.083 404 80.0417 404H0V212.416Z"
-                                fill="url(#paint0_linear)"
+                                fill="url(#linear1234)"
                             />
                         </g>
                         <defs>
-                            <filter id="filter0_d" x="0" y="0" width="1920" height="404" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                            <filter id="aaavvv" x="0" y="0" width="1920" height="404" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                                 <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                                 <feOffset dy="-20" />
@@ -312,7 +344,7 @@ export default function Home() {
                                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
                                 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                             </filter>
-                            <linearGradient id="paint0_linear" x1="960" y1="-503.939" x2="960" y2="404" gradientUnits="userSpaceOnUse">
+                            <linearGradient id="linear1234" x1="960" y1="-503.939" x2="960" y2="404" gradientUnits="userSpaceOnUse">
                                 <stop stopColor="#9BD1E5" stopOpacity="0" />
                                 <stop offset="1" stopColor="#9BD1E5" />
                             </linearGradient>

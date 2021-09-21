@@ -5,7 +5,10 @@ import Head from "next/head";
 import AOS from "aos";
 
 import "../styles/globals.css";
+import "../styles/aos_custom.css";
+import "../styles/illustrations_custom.css";
 import "aos/dist/aos.css";
+import "animate.css";
 
 import ScrollToTop from "@/components/ScrollToTopButton";
 
@@ -15,10 +18,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
         AOS.init({
             easing: "ease-out-cubic",
+            startEvent: "DOMContentLoaded",
             offset: 50,
             delay: 200,
             mirror: true,
-            // once: true,
         });
     }, []);
 

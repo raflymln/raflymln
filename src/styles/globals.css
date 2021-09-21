@@ -60,7 +60,29 @@
         @apply block rounded-3.5 px-10 py-3 transform translate-y-[-4px] hover:translate-y-0 font-baloo text-lg leading-7 tracking-wide duration-200 ease-in-out;
     }
 
-    .container {
-        @apply max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto;
+    .bird {
+        @apply animate-[bird-fly-cycle] w-20 h-32;
+        background-image: url(/images/illustrations/bird-cells.svg);
+        background-size: auto 100%;
+        animation-timing-function: steps(10);
+        animation-iteration-count: infinite;
+    }
+
+    .bird-container {
+        @apply absolute top-[20%] left-[-10%] transform scale-0 translate-x-[-10vw] animate-[bird-fly];
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .tree {
+        @apply animate-[tree-1];
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+    }
+
+    .tree2 {
+        @apply animate-[tree-2];
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
     }
 }
