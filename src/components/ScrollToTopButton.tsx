@@ -63,8 +63,7 @@ const Button = () => {
                 <Link href="#0" passHref={true}>
                     <button
                         onClick={scrollToTop}
-                        className="btn fixed right-8 bottom-8 z-50 animate-shake duration-100 bg-theme-blue-very-dark text-white !rounded-full"
-                        style={{ animationIterationCount: 1, animationDuration: "0.5s" }}>
+                        className="btn fixed right-8 bottom-8 z-50 animate-shake duration-100 bg-theme-blue-very-dark text-white !rounded-full animate-iteration-[1] animate-duration-[0.5s]">
                         <span className="bg-theme-blue-dark !p-5 !rounded-full">
                             <svg className="text-white fill-current w-5 h-auto" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.65 38.7H19.35V12.9L10.75 21.5L6.44995 19.35L21.5 4.29999L36.5499 19.35L32.2499 21.5L23.65 12.9V38.7Z" />
@@ -76,8 +75,8 @@ const Button = () => {
 
             {/* Rocket Section */}
             {isRocketActive && (
-                <div className="h-full w-full fixed left-0 top-0 flex items-center justify-center z-[999] bg-black animate-[rocket-bg-fadein]" style={{ animationDuration: "2.5s" }}>
-                    <img src={Images.Rocket} alt="rocket" className="transform animate-[rocket-fly]" style={{ animationDuration: "2.5s" }} />
+                <div className="h-full w-full fixed left-0 top-0 flex items-center justify-center z-[999] bg-black animate-[rocket-bg-fadein] animate-duration-[2.5s]">
+                    <img src={Images.Rocket} alt="rocket" className="transform animate-[rocket-fly] animate-duration-[2.5s]" />
                 </div>
             )}
         </>

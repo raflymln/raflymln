@@ -65,7 +65,9 @@ const Projects = () => {
     const ProjectData = ({ ...props }: any) => {
         return (
             <Link href={props.href}>
-                <a className="relative w-80 h-96 md:w-96 md:h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200" style={{ backgroundImage: `url(${props.image})` }}>
+                <a
+                    className="relative scroll-snap-none w-80 h-96 md:w-96 md:h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
+                    style={{ backgroundImage: `url(${props.image})` }}>
                     <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
 
                     <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
@@ -140,7 +142,7 @@ const Projects = () => {
 const Content = ({ children, ...props }: any) => {
     return (
         <Link href={props.href || "#0"} passHref={true}>
-            <div className="px-10 lg:p-0 relative" data-aos="rubberBand">
+            <div className="px-10 lg:p-0 relative" data-aos="pulse">
                 <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex items-start md:items-center justify-between flex-col-reverse md:flex-row text-theme-green-light gap-2 transform hover:scale-105 cursor-pointer duration-200 ease-in bg-gradient-to-b from-white to-theme-blue-light box-border">
                     {/* REMOVE UNDER THIS LINE AFTER PRODUCTION */}
                     <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
@@ -172,14 +174,14 @@ export default function Home() {
                         <h3 className="font-somatic text-lg md:text-2xl" data-aos="bounce">
                             <span className="animate-wave inline-block transform origin-bottom-right">👋</span> Hi! Welcome, I'm
                         </h3>
-                        <h1 className="font-baloo text-6xl md:text-8xl" data-aos="bounce" style={{ animationDelay: ".3s" }}>
+                        <h1 className="font-baloo text-6xl md:text-8xl !animate-delay-[0.3s]" data-aos="bounce">
                             Rafly Maulana
                         </h1>
-                        <p className="font-comfortaa text-lg" data-aos="bounce" style={{ animationDelay: ".6s" }}>
+                        <p className="font-comfortaa text-lg !animate-delay-[0.6s]" data-aos="bounce">
                             A <b>fullstack developer</b>, <b>designer</b>, and <b>producer</b>, from <span className="text-red-600">Indonesia</span>.
                         </p>
                         <Link href="#about" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white mt-8" data-aos="bounce" style={{ animationDelay: ".9s" }}>
+                            <button className="btn bg-theme-green-dark text-white mt-8 !animate-delay-[0.9s]" data-aos="bounce">
                                 <span className="bg-theme-green-light">"Who Are You?"</span>
                             </button>
                         </Link>
@@ -193,20 +195,20 @@ export default function Home() {
                 </div>
 
                 <div className="absolute top-0 left-0 w-full h-full z-10">
-                    <div className="bird-container" style={{ animationDuration: "15s", animationDelay: "0s" }}>
-                        <div className="bird" style={{ animationDuration: "1s", animationDelay: "-0.5s" }} />
+                    <div className="bird-container animate-duration-[15s] animate-delay-[0s]">
+                        <div className="bird animate-duration-[1s] animate-delay-[-0.5s]" />
                     </div>
 
-                    <div className="bird-container" style={{ animationDuration: "16s", animationDelay: "1s" }}>
-                        <div className="bird" style={{ animationDuration: "0.9s", animationDelay: "-0.75s" }} />
+                    <div className="bird-container animate-duration-[16s] animate-delay-[1s]">
+                        <div className="bird animate-duration-[0.9s] animate-delay-[-0.75s]" />
                     </div>
 
-                    <div className="bird-container" style={{ animationDuration: "14.6s", animationDelay: "9.5s" }}>
-                        <div className="bird" style={{ animationDuration: "1.25s", animationDelay: "-0.25s" }} />
+                    <div className="bird-container animate-duration-[14.6s] animate-delay-[9.5s]">
+                        <div className="bird animate-duration-[1.25s] animate-delay-[-0.25s]" />
                     </div>
 
-                    <div className="bird-container" style={{ animationDuration: "16s", animationDelay: "10.25s" }}>
-                        <div className="bird" style={{ animationDuration: "1.1s", animationDelay: "-0.5s" }} />
+                    <div className="bird-container animate-duration-[16s] animate-delay-[10.25s]">
+                        <div className="bird animate-duration-[1.1s] animate-delay-[-0.5s]" />
                     </div>
                 </div>
             </section>
@@ -216,10 +218,10 @@ export default function Home() {
                     <AboutMeIllustration className="w-auto max-w-[589px] relative" data-aos="fade-up" />
 
                     <div className="text-black space-y-8 max-w-lg 2xl:max-w-md rounded-3.5 p-0 md:p-8 2xl:p-0 relative">
-                        <h1 className="font-baloo text-6xl" data-aos="lightSpeedInRight" data-aos-anchor-placement="center-bottom">
+                        <h1 className="font-baloo text-6xl" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
                             I Learn Through Experiences
                         </h1>
-                        <p className="font-comfortaa text-base font-regular leading-7" data-aos="fadeInDown" data-aos-anchor-placement="center-bottom">
+                        <p className="font-comfortaa text-base font-regular leading-7" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
                             I’m Rafly, from Indonesia. I’ve spent my time to take any opportunity as well as developing my experience and skills to things like Music Producing, Graphic Designing,
                             Programming, and many others.
                             <br />
@@ -228,7 +230,7 @@ export default function Home() {
                             works that i can do.
                         </p>
                         <Link href="http://linkedin.com/in/raflymln" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white" data-aos="jackInTheBox" data-aos-anchor-placement="center-bottom">
+                            <button className="btn bg-theme-green-dark text-white" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
                                 <span className="bg-theme-green-light">Great, Now Tell Me More!</span>
                             </button>
                         </Link>

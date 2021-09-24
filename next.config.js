@@ -5,7 +5,11 @@ const runtimeCaching = require("next-pwa/cache");
 const path = require("path");
 
 const config = {
-    plugins: [nextImages, nextPWA],
+    // prettier-ignore
+    plugins: [
+        nextImages,
+        nextPWA
+    ],
     settings: {
         reactStrictMode: true,
         distDir: "build",
