@@ -61,28 +61,20 @@
     }
 
     .bird {
-        @apply animate-[bird-fly-cycle] w-20 h-32;
+        @apply animate-[bird-fly-cycle] w-20 h-32 animate-iteration-infinite animate-timing-[steps(10)];
         background-image: url(/images/illustrations/bird-cells.svg);
         background-size: auto 100%;
-        animation-timing-function: steps(10);
-        animation-iteration-count: infinite;
     }
 
     .bird-container {
-        @apply absolute top-[20%] left-[-10%] transform scale-0 translate-x-[-10vw] animate-[bird-fly];
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        @apply absolute top-[20%] left-[-10%] transform scale-0 translate-x-[-10vw] animate-[bird-fly] animate-iteration-infinite animate-timing-linear;
     }
 
     .tree {
-        @apply animate-[tree-1];
-        animation-iteration-count: infinite;
-        animation-duration: 5s;
+        @apply animate-[tree-1] animate-iteration-infinite animate-duration-[5s];
     }
 
     .tree2 {
-        @apply animate-[tree-2];
-        animation-iteration-count: infinite;
-        animation-duration: 4s;
+        @apply animate-[tree-2] animate-iteration-infinite animate-duration-[4s];
     }
 }
