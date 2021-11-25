@@ -1,16 +1,13 @@
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const nextImages = require("next-images");
 const nextPWA = require("next-pwa");
 
 const runtimeCaching = require("next-pwa/cache");
 const path = require("path");
 
-const config = {
-    // prettier-ignore
-    plugins: [
-        nextImages,
-        nextPWA
-    ],
-    settings: {
+const config = (phase) => {
+    let plugins = [nextImages];
+    let settings = {
         reactStrictMode: true,
         distDir: "build",
         swcMinify: true,
@@ -26,8 +23,20 @@ const config = {
             };
             return config;
         },
-    },
+    };
+
+    if (phase !== PHASE_DEVELOPMENT_SERVER) {
+        plugins.push(nextPWA);
+    }
+
+    return {
+        plugins,
+        settings,
+    };
 };
 
 const pipe = (funcs) => (value) => funcs.reduce((v, f) => f(v), value);
-module.exports = pipe(config.plugins)(config.settings);
+module.exports = (phase, { defaultConfig }) => {
+    const cfg = config(phase, { defaultConfig });
+    return pipe(cfg.plugins)(cfg.settings);
+};
