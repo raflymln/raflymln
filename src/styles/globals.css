@@ -53,6 +53,14 @@
     body {
         @apply overflow-x-hidden;
     }
+
+    .body-fadeIn {
+        animation: fadeInDown 1s;
+    }
+
+    .body-fadeOut {
+        animation: fadeOutDown 1s;
+    }
 }
 
 @layer components {
