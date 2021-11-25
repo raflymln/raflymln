@@ -86,17 +86,6 @@ module.exports = {
                         transform: "translate(1px, -2px) rotate(-1deg)",
                     },
                 },
-                "navigation-pulse": {
-                    "0%": {
-                        "box-shadow": "0 0 0 0 rgba(87, 167, 115, 0.7)",
-                    },
-                    "70%": {
-                        "box-shadow": "0 0 0 6px rgba(87, 167, 115, 0.5)",
-                    },
-                    "100%": {
-                        "box-shadow": "0 0 0 10px rgba(87, 167, 115, 0)",
-                    },
-                },
                 "rocket-fly": {
                     "0%": {
                         transform: "scale(1) translateY(100%)",
