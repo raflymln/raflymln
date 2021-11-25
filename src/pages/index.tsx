@@ -1,6 +1,4 @@
-import { MutableRefObject, useRef } from "react";
 import Link from "next/link";
-import ScrollContainer from "react-indiana-drag-scroll";
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -13,11 +11,18 @@ import AboutMeIllustration from "@/components/illustrations/AboutMe";
 const Projects = () => {
     const ProjectList = [
         {
-            href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
-            type: "Fullstack Development",
-            image: "/images/projects/RaflyMaulanaV1.webp",
-            title: "Rafly Maulana V1",
-            description: "1st version of my portofolio site",
+            href: "https://dbiw21.britonenglish.co.id/",
+            type: "UI/UX & Front-end Development",
+            image: "/images/projects/DBI2122.webp",
+            title: "Duta Bahasa Inggris 2021-2022",
+            description: "English Competition for SMA/SMK and equivalent in Indonesia",
+        },
+        {
+            href: "https://indiespices.com/",
+            type: "UI/UX & Front-end Development",
+            image: "/images/projects/IndieSpices.webp",
+            title: "IndieSpices",
+            description: "Top Leading Supply of Spices in Indonesia",
         },
         {
             href: "https://www.behance.net/gallery/127122741/Project-V2-Portfolio-Website-Design",
@@ -27,8 +32,15 @@ const Projects = () => {
             description: "2nd version of my portofolio site",
         },
         {
+            href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
+            type: "Fullstack Development",
+            image: "/images/projects/RaflyMaulanaV1.webp",
+            title: "Rafly Maulana V1",
+            description: "1st version of my portofolio site",
+        },
+        {
             href: "https://www.behance.net/gallery/127174313/Project-Foxxy-E-Commerce",
-            type: "Website Development",
+            type: "Fullstack Development",
             image: "/images/projects/FoxxyECommerce.webp",
             title: "Foxxy E-Commerce",
             description: "A marketplace for every digital items",
@@ -42,112 +54,55 @@ const Projects = () => {
         },
         {
             href: "https://drive.google.com/drive/folders/1UDQa3XFEwL2TBOplVRnT67uG8UpIENHV?usp=sharing",
-            type: "Website Development",
+            type: "Fullstack Development",
             image: "/images/projects/YKBJABAR.webp",
             title: "Yayasan Kemala Bhayangkari Jawa Barat",
             description: "Yayasan Kemala Bhayangkari Polda Jabar",
         },
     ];
 
-    const ref: MutableRefObject<any> = useRef(null);
-    const scroll = (scrollOffset: number) => {
-        window.scrollTo({ left: (ref.current.scrollLeft += scrollOffset), behavior: "smooth" });
-    };
-
-    const ScrollButton = ({ children, ...props }: any) => {
-        return (
-            <button className="btn bg-theme-blue-very-dark text-white mt-8" {...props}>
-                <span className="bg-theme-blue-dark !p-3">{children}</span>
-            </button>
-        );
-    };
-
-    const ProjectData = ({ ...props }: any) => {
-        return (
-            <Link href={props.href}>
-                <a
-                    className="relative scroll-snap-none w-80 h-96 md:w-96 md:h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
-                    style={{ backgroundImage: `url(${props.image})` }}>
-                    <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
-
-                    <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
-                        <div className="flex flex-row justify-between items-center">
-                            <p className="rounded-3.5 text-xs font-somatic px-5 py-2 bg-black bg-opacity-50 text-white tracking-widest">{props.type}</p>
-
-                            <div className="rounded-3.5 text-lg font-somatic p-2 bg-black bg-opacity-50 text-white tracking-wider">
-                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div className="space-y-1 text-white">
-                            <h1 className="font-baloo text-4xl truncate">{props.title}</h1>
-                            <p className="font-comforta text-sm tracking-wider truncate">{props.description}</p>
-                        </div>
-                    </section>
-                </a>
-            </Link>
-        );
-    };
-
     return (
-        <>
-            <div className="relative container w-full h-full">
-                <section className="flex flex-row justify-between items-end">
-                    <div className="text-theme-blue-dark max-w-sm">
-                        <h1 className="font-baloo text-7xl" data-aos="zoom-in">
-                            My Works
-                        </h1>
-                        <h3 className="font-somatic text-2xl leading-8 pt-2" data-aos="zoom-in" data-aos-delay="200">
-                            Collection of all my projects and case studies.
-                        </h3>
+        <section className="relative w-full mt-8 rounded-3.5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 z-50 gap-8">
+            {ProjectList.map((data, index) => (
+                <Link href={data.href} key={index}>
+                    <a
+                        className="relative scroll-snap-none w-full h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
+                        style={{ backgroundImage: `url(${data.image})` }}>
+                        <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
 
-                        <Link href="https://www.behance.net/raflymln" passHref={true}>
-                            <button className="btn bg-theme-blue-very-dark text-white mt-8" data-aos="zoom-in" data-aos-delay="400">
-                                <span className="bg-theme-blue-dark">Interesting, I Want to See More!</span>
-                            </button>
-                        </Link>
-                    </div>
+                        <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
+                            <div className="flex flex-row justify-between items-center">
+                                <p className="rounded-3.5 text-xs font-somatic px-5 py-2 bg-black bg-opacity-50 text-white tracking-widest">{data.type}</p>
 
-                    <div className="space-x-4 hidden lg:block">
-                        <ScrollButton onClick={() => scroll(-300)} data-aos="jello" aria-label="Scroll Left">
-                            <svg className="w-4 h-auto" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.9515 25.0485L14 28L-1.55445e-06 14L14 0L16.9515 2.95154L7.99046 11.9126H28V16.0874H7.99046L16.9515 25.0485Z" fill="white" />
-                            </svg>
-                        </ScrollButton>
+                                <div className="rounded-3.5 text-lg font-somatic p-2 bg-black bg-opacity-50 text-white tracking-wider">
+                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
 
-                        <ScrollButton onClick={() => scroll(300)} data-aos="jello" aria-label="Scroll Right">
-                            <svg className="w-4 h-auto" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
-                            </svg>
-                        </ScrollButton>
-                    </div>
-                </section>
-
-                <section className="relative z-50" data-aos="fade-right">
-                    <ScrollContainer className="relative w-full mt-8 rounded-3.5 flex items-center justify-start flex-row flex-nowrap overflow-auto space-x-8 z-50 cursor-grabbing" innerRef={ref}>
-                        {ProjectList.map((data, index) => (
-                            <ProjectData key={index} type={data.type} href={data.href} image={data.image} title={data.title} description={data.description} />
-                        ))}
-                    </ScrollContainer>
-                </section>
-            </div>
-
-            <p className="font-comfortaa text-sm text-theme-blue-very-dark mx-auto text-center pt-8 font-bold z-50 relative">- Drag to Scroll Horizontally -</p>
-        </>
+                            <div className="space-y-1 text-white">
+                                <h1 className="font-baloo text-4xl">{data.title}</h1>
+                                <p className="font-comforta text-sm tracking-wider truncate">{data.description}</p>
+                            </div>
+                        </section>
+                    </a>
+                </Link>
+            ))}
+        </section>
     );
 };
 
-const Content = ({ children, ...props }: any) => {
+const Content = ({ children, comingSoon, ...props }: any) => {
     return (
         <Link href={props.href || "#0"} passHref={true}>
             <div className="px-10 lg:p-0 relative" data-aos="pulse">
                 <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex items-start md:items-center justify-between flex-col-reverse md:flex-row text-theme-green-light gap-2 transform hover:scale-105 cursor-pointer duration-200 ease-in bg-gradient-to-b from-white to-theme-blue-light box-border">
-                    {/* REMOVE UNDER THIS LINE AFTER PRODUCTION */}
-                    <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
-                        <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
-                    </div>
+                    {comingSoon && (
+                        <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
+                            <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
+                        </div>
+                    )}
 
                     <div className="pt-4 md:pt-0">
                         <h1 className="font-baloo text-4xl pb-1">{props.title}</h1>
@@ -165,23 +120,21 @@ export default function Home() {
     return (
         <>
             <section id="intro" className="relative w-full bg-cover bg-center h-[800px] lg:h-[750px] bg-theme-blue-medium " style={{ backgroundImage: `url(${Images.MountainLandscape})` }}>
-                <div className="relative container w-full h-full flex items-center z-[999]">
-                    <div className="absolute top-14 right-0 w-max">
-                        <Navigation />
-                    </div>
+                <Navigation />
 
+                <div className="relative container w-full h-auto flex items-center z-[999] pt-14">
                     <div className="max-w-sm text-black space-y-6">
-                        <h3 className="font-somatic text-lg md:text-2xl" data-aos="bounce">
+                        <h3 className="font-somatic text-lg md:text-2xl">
                             <span className="animate-wave inline-block transform origin-bottom-right">👋</span> Hi! Welcome, I'm
                         </h3>
-                        <h1 className="font-baloo text-6xl md:text-8xl !animate-delay-[0.3s]" data-aos="bounce">
+                        <h1 className="font-baloo text-6xl md:text-8xl" data-aos="bounce">
                             Rafly Maulana
                         </h1>
-                        <p className="font-comfortaa text-lg !animate-delay-[0.6s]" data-aos="bounce">
+                        <p className="font-comfortaa text-lg" data-aos="fadeIn">
                             A <b>fullstack developer</b>, <b>designer</b>, and <b>producer</b>, from <span className="text-red-600">Indonesia</span>.
                         </p>
                         <Link href="#about" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white mt-8 !animate-delay-[0.9s]" data-aos="bounce">
+                            <button className="btn bg-theme-green-dark text-white mt-8" data-aos="fadeIn">
                                 <span className="bg-theme-green-light">"Who Are You?"</span>
                             </button>
                         </Link>
@@ -253,16 +206,40 @@ export default function Home() {
                         Links & Content
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 box-border" data-aos="zoom-in">
-                        <Content title="Bookmarks" description="List of hidden tools and things used things by me">
-                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 56 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <Content title="Investment" description="Invest your money for your future, see how i do it!" comingSoon>
+                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 95 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M49.35 0.5H9.7C6.0217 0.5 0.550003 2.93695 0.550003 9.65V52.35C0.550003 59.063 6.0217 61.5 9.7 61.5H55.45V55.4H9.7366C8.3275 55.3634 6.65 54.8052 6.65 52.35C6.65 52.042 6.67745 51.7674 6.7232 51.5173C7.0648 49.7636 8.50135 49.3305 9.73355 49.3H52.4C52.4549 49.3 52.4946 49.2725 52.5495 49.2695H55.45V6.6C55.45 3.23585 52.7142 0.5 49.35 0.5ZM49.35 43.2H6.65V9.65C6.65 7.1917 8.3275 6.6366 9.7 6.6H31.05V27.95L37.15 24.9L43.25 27.95V6.6H49.35V43.2Z"
-                                    fill="#57A773"
+                                    d="M4.1665 12.6309C4.1665 10.3198 5.08461 8.10326 6.71886 6.46902C8.3531 4.83477 10.5696 3.91666 12.8808 3.91666H82.5951C84.9062 3.91666 87.1228 4.83477 88.757 6.46902C90.3912 8.10326 91.3094 10.3198 91.3094 12.6309V56.2024C91.3094 58.5136 90.3912 60.7301 88.757 62.3643C87.1228 63.9986 84.9062 64.9167 82.5951 64.9167H12.8808C10.5696 64.9167 8.3531 63.9986 6.71886 62.3643C5.08461 60.7301 4.1665 58.5136 4.1665 56.2024V12.6309Z"
+                                    stroke="#57A773"
+                                    strokeWidth="7"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M47.7384 47.4881C54.9576 47.4881 60.8098 41.6358 60.8098 34.4167C60.8098 27.1975 54.9576 21.3452 47.7384 21.3452C40.5193 21.3452 34.667 27.1975 34.667 34.4167C34.667 41.6358 40.5193 47.4881 47.7384 47.4881Z"
+                                    stroke="#57A773"
+                                    strokeWidth="7"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M4.1665 21.3452C8.78885 21.3452 13.2219 19.509 16.4904 16.2405C19.7589 12.972 21.5951 8.53901 21.5951 3.91666"
+                                    stroke="#57A773"
+                                    strokeWidth="7"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M73.8809 64.9167C73.8809 60.2943 75.7171 55.8613 78.9856 52.5928C82.2541 49.3243 86.6871 47.4881 91.3094 47.4881"
+                                    stroke="#57A773"
+                                    strokeWidth="7"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                             </svg>
                         </Content>
 
-                        <Content title="Store" description="My products and my services">
+                        <Content title="Store" description="My products and my services" comingSoon>
                             <svg className="h-full max-h-16 w-auto" viewBox="0 0 66 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M55.9489 3.61742C55.3768 2.66878 54.5699 1.88358 53.606 1.33753C52.6421 0.791492 51.5538 0.503039 50.446 0.5H15.554C13.3131 0.5 11.2038 1.69432 10.0512 3.61742L1.35388 18.1097C1.05291 18.6087 0.894149 19.1805 0.894777 19.7632C0.907599 22.862 2.04894 25.85 4.1053 28.1683V55.0789C4.1053 58.6202 6.98515 61.5 10.5264 61.5H55.4737C59.0149 61.5 61.8948 58.6202 61.8948 55.0789V28.1683C63.9511 25.85 65.0925 22.862 65.1053 19.7632C65.1059 19.1805 64.9472 18.6087 64.6462 18.1097L55.9489 3.61742ZM58.6329 20.569C58.4347 22.1191 57.6789 23.544 56.5066 24.5774C55.3344 25.6108 53.8259 26.182 52.2632 26.1842C48.722 26.1842 45.8421 23.3044 45.8421 19.7632C45.8421 19.5448 45.7619 19.3522 45.7169 19.1467L45.7811 19.1339L43.3379 6.92105H50.446L58.6329 20.569ZM29.2084 6.92105H36.7885L39.3986 19.9718C39.2863 23.4135 36.4674 26.1842 33 26.1842C29.5327 26.1842 26.7138 23.4135 26.6015 19.9718L29.2084 6.92105ZM15.554 6.92105H22.6621L20.2221 19.1339L20.2864 19.1467C20.2382 19.3522 20.1579 19.5448 20.1579 19.7632C20.1579 23.3044 17.2781 26.1842 13.7369 26.1842C12.1742 26.182 10.6657 25.6108 9.49346 24.5774C8.32121 23.544 7.56536 22.1191 7.3672 20.569L15.554 6.92105ZM26.579 55.0789V45.4474H39.4211V55.0789H26.579ZM45.8421 55.0789V45.4474C45.8421 41.9062 42.9623 39.0263 39.4211 39.0263H26.579C23.0378 39.0263 20.1579 41.9062 20.1579 45.4474V55.0789H10.5264V32.1494C11.5569 32.4158 12.6196 32.6053 13.7369 32.6053C15.5599 32.6062 17.3621 32.2181 19.023 31.4668C20.684 30.7155 22.1655 29.6183 23.3685 28.2486C25.7218 30.9197 29.1699 32.6053 33 32.6053C36.8302 32.6053 40.2783 30.9197 42.6316 28.2486C43.8346 29.6183 45.3161 30.7155 46.9771 31.4668C48.638 32.2181 50.4402 32.6062 52.2632 32.6053C53.3805 32.6053 54.4431 32.4158 55.4737 32.1494V55.0789H45.8421Z"
@@ -271,7 +248,7 @@ export default function Home() {
                             </svg>
                         </Content>
 
-                        <Content title="Blog" description="See the world from the perspective of me">
+                        <Content title="Blog" description="See the world from the perspective of me" comingSoon>
                             <svg className="h-full max-h-16 w-auto" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.5 51.3333H25.9167V56.4166H0.5V51.3333Z" fill="#57A773" />
                                 <path d="M0.5 36.0833H25.9167V41.1666H0.5V36.0833Z" fill="#57A773" />
@@ -286,7 +263,7 @@ export default function Home() {
                             </svg>
                         </Content>
 
-                        <Content title="Events" description="Join the exciting exclamation event hosted by me">
+                        <Content title="Events" description="Join the exciting exclamation event hosted by me" comingSoon>
                             <svg className="h-full max-h-16 w-auto" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.08508 7.08838H14.2617" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M10.6735 3.5V10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
@@ -324,8 +301,29 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="projects" className="relative w-full bg-gradient-to-b from-theme-blue-light to-[#9BD1E5] py-10">
-                <Projects />
+            <section id="projects" className="relative w-full bg-gradient-to-b from-theme-blue-light to-theme-blue-medium py-10">
+                <div className="relative container w-full h-full">
+                    <section className="flex flex-row justify-between items-end">
+                        <div className="text-theme-blue-dark max-w-sm">
+                            <h1 className="font-baloo text-7xl" data-aos="zoom-in">
+                                My Works
+                            </h1>
+                            <h3 className="font-somatic text-2xl leading-8 pt-2" data-aos="zoom-in" data-aos-delay="200">
+                                Collection of all my projects and case studies.
+                            </h3>
+
+                            <Link href="https://www.behance.net/raflymln" passHref={true}>
+                                <button className="btn bg-theme-blue-very-dark text-white mt-8" data-aos="zoom-in" data-aos-delay="400">
+                                    <span className="bg-theme-blue-dark">Interesting, I Want to See More!</span>
+                                </button>
+                            </Link>
+                        </div>
+                    </section>
+
+                    <section className="relative z-50" data-aos="fade-right">
+                        <Projects />
+                    </section>
+                </div>
 
                 <div className="absolute left-0 -bottom-1">
                     <svg className="w-full h-full" height="404" viewBox="0 0 1919 404" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -355,7 +353,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="contact" className="relative w-full bg-gradient-to-b from-[#9BD1E5] to-theme-blue-dark">
+            <section id="contact" className="relative w-full bg-gradient-to-b from-theme-blue-medium to-theme-blue-dark">
                 <Footer />
             </section>
         </>
