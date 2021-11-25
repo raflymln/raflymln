@@ -13,6 +13,7 @@ const config = {
     settings: {
         reactStrictMode: true,
         distDir: "build",
+        swcMinify: true,
         pwa: {
             dest: "public",
             runtimeCaching,
