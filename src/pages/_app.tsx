@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { useEffect } from "react";
 import Head from "next/head";
 import AOS from "aos";
+import { useRouter } from "next/router";
 
 import "../styles/globals.css";
 import "../styles/aos_custom.css";
@@ -11,8 +12,45 @@ import "aos/dist/aos.css";
 import "animate.css";
 
 import ScrollToTop from "@/components/ScrollToTopButton";
+import MetaTags from "@/components/MetaTags";
+
+const metaData = {
+    title: "Rafly Maulana - Fullstack Developer",
+    description: "Hello! I’m Rafly, a fullstack developer, designer, and producer, from Indonesia.",
+    url: "https://raflymaulana.me",
+    image: "https://raflymaulana.me/images/banner.png",
+    themeColor: "#ffffff",
+    keywords: "rafly, maulana, ui, ux, programmer, developer, backend, frontend, designer, indonesia, website, producer, fullstack, freelance, freelancer",
+    author: "Rafly Maulana",
+    charSet: "utf-8",
+    language: "English",
+    icons: [
+        {
+            src: "/favicon.ico",
+            sizes: "16x16",
+            type: "image/ico",
+        },
+        {
+            src: "/favicon.ico",
+            sizes: "32x32",
+            type: "image/ico",
+        },
+        {
+            src: "/favicon.ico",
+            sizes: "64x64",
+            type: "image/ico",
+        },
+        {
+            src: "/favicon.ico",
+            sizes: "128x128",
+            type: "image/ico",
+        },
+    ],
+};
 
 export default function App({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+
     useEffect(() => {
         document.documentElement.lang = "en-us";
 
@@ -25,32 +63,34 @@ export default function App({ Component, pageProps }: AppProps) {
         });
     }, []);
 
+    useEffect(() => {
+        const bodyClass = document.body.classList;
+
+        const routeChangeStartHandler = () => {
+            bodyClass.add("body-fadeOut");
+        };
+
+        const routeChangeCompleteHandler = () => {
+            bodyClass.remove("body-fadeOut");
+            bodyClass.add("body-fadeIn");
+            setTimeout(() => bodyClass.remove("body-fadeIn"), 1000);
+        };
+
+        router.events.on("routeChangeStart", routeChangeStartHandler);
+        router.events.on("routeChangeComplete", routeChangeCompleteHandler);
+
+        return () => {
+            router.events.off("routeChangeStart", routeChangeStartHandler);
+            router.events.off("routeChangeComplete", routeChangeCompleteHandler);
+        };
+    }, [router.events]);
+
     return (
         <>
             <Head>
-                <title>Rafly Maulana</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>{metaData.title}</title>
                 <link rel="manifest" crossOrigin="use-credentials" href="/manifest.json" />
-
-                {/* Primary Meta Tags */}
-                <meta name="viewport" content="initial-scale=1" />
-                <meta name="title" content="Rafly Maulana" />
-                <meta name="description" content="Rafly Maulana was a fullstack developer, designer, and producer, from Indonesia." />
-                <meta name="theme-color" content="#57A773" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://raflymaulana.me/" />
-                <meta property="og:title" content="Rafly Maulana" />
-                <meta property="og:description" content="Rafly Maulana was a fullstack developer, designer, and producer, from Indonesia." />
-                <meta property="og:image" content="https://raflymaulana.me/images/banner.png" />
-
-                {/* Twitter */}
-                <meta property="twitter:card" content="https://raflymaulana.me/images/banner.png" />
-                <meta property="twitter:url" content="https://raflymaulana.me/" />
-                <meta property="twitter:title" content="Rafly Maulana" />
-                <meta property="twitter:description" content="Rafly Maulana was a fullstack developer, designer, and producer, from Indonesia." />
-                <meta property="twitter:image" content="https://raflymaulana.me/images/banner.png" />
+                <MetaTags metaData={metaData} />
             </Head>
 
             <ScrollToTop>
