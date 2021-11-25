@@ -12,14 +12,14 @@ const Projects = () => {
     const ProjectList = [
         {
             href: "https://dbiw21.britonenglish.co.id/",
-            type: "UI/UX & Front-end Development",
+            type: "UI/UX & Fullstack Development",
             image: "/images/projects/DBI2122.webp",
             title: "Duta Bahasa Inggris 2021-2022",
             description: "English Competition for SMA/SMK and equivalent in Indonesia",
         },
         {
             href: "https://indiespices.com/",
-            type: "UI/UX & Front-end Development",
+            type: "UI/UX & Frontend Development",
             image: "/images/projects/IndieSpices.webp",
             title: "IndieSpices",
             description: "Top Leading Supply of Spices in Indonesia",
@@ -33,7 +33,7 @@ const Projects = () => {
         },
         {
             href: "https://www.behance.net/gallery/127108847/Project-V1-Portfolio-Web-Design",
-            type: "Fullstack Development",
+            type: "Frontend Development",
             image: "/images/projects/RaflyMaulanaV1.webp",
             title: "Rafly Maulana V1",
             description: "1st version of my portofolio site",
@@ -67,7 +67,7 @@ const Projects = () => {
                 <Link href={data.href} key={index}>
                     <a
                         className="relative scroll-snap-none w-full h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
-                        style={{ backgroundImage: `url(${data.image})` }}>
+                        style={{ backgroundImage: `url(${data.image})`, animationDelay: `10s` }}>
                         <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
 
                         <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
@@ -320,7 +320,7 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section className="relative z-50" data-aos="fade-right">
+                    <section className="relative z-50">
                         <Projects />
                     </section>
                 </div>
