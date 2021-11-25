@@ -11,14 +11,14 @@ import AboutMeIllustration from "@/components/illustrations/AboutMe";
 const Projects = () => {
     const ProjectList = [
         {
-            href: "https://dbiw21.britonenglish.co.id/",
+            href: "https://www.behance.net/gallery/131988309/Duta-Bahasa-Inggris-2021-2022",
             type: "UI/UX & Fullstack Development",
             image: "/images/projects/DBI2122.webp",
             title: "Duta Bahasa Inggris 2021-2022",
             description: "English Competition for SMA/SMK and equivalent in Indonesia",
         },
         {
-            href: "https://indiespices.com/",
+            href: "https://www.behance.net/gallery/131966587/IndieSpices",
             type: "UI/UX & Frontend Development",
             image: "/images/projects/IndieSpices.webp",
             title: "IndieSpices",
