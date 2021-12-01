@@ -11,6 +11,13 @@ import AboutMeIllustration from "@/components/illustrations/AboutMe";
 const Projects = () => {
     const ProjectList = [
         {
+            href: "https://www.behance.net/gallery/132210415/Briton-English-Placement-Test",
+            type: "UI/UX & Fullstack Development",
+            image: "/images/projects/BRITONPlacementTest.webp",
+            title: "Briton English Placement Test",
+            description: "Placement test website for Briton English Education",
+        },
+        {
             href: "https://www.behance.net/gallery/131988309/Duta-Bahasa-Inggris-2021-2022",
             type: "UI/UX & Fullstack Development",
             image: "/images/projects/DBI2122.webp",
