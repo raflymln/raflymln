@@ -71,30 +71,32 @@ const Projects = () => {
     return (
         <section className="relative w-full mt-8 rounded-3.5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 z-50 gap-8">
             {ProjectList.map((data, index) => (
-                <Link href={data.href} key={index}>
-                    <a
-                        className="relative scroll-snap-none w-full h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
-                        style={{ backgroundImage: `url(${data.image})`, animationDelay: `10s` }}>
-                        <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
+                <a
+                    className="relative scroll-snap-none w-full h-124 bg-cover rounded-3.5 flex-shrink-0 cursor-pointer hover:opacity-70 duration-200"
+                    style={{ backgroundImage: `url(${data.image})`, animationDelay: `10s` }}
+                    key={index}
+                    href={data.href}
+                    target="_blank"
+                    rel="noreferrer">
+                    <section className="w-full h-full bg-black opacity-50 absolute left-0 top-0 rounded-3.5 z-10" />
 
-                        <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
-                            <div className="flex flex-row justify-between items-center">
-                                <p className="rounded-3.5 text-xs font-somatic px-5 py-2 bg-black bg-opacity-50 text-white tracking-widest">{data.type}</p>
+                    <section className="w-full h-full relative z-20 p-7 flex flex-col justify-between">
+                        <div className="flex flex-row justify-between items-center">
+                            <p className="rounded-3.5 text-xs font-somatic px-5 py-2 bg-black bg-opacity-50 text-white tracking-widest">{data.type}</p>
 
-                                <div className="rounded-3.5 text-lg font-somatic p-2 bg-black bg-opacity-50 text-white tracking-wider">
-                                    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
-                                    </svg>
-                                </div>
+                            <div className="rounded-3.5 text-lg font-somatic p-2 bg-black bg-opacity-50 text-white tracking-wider">
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.586 12.793L7 14.207L13.707 7.49997L7 0.792969L5.586 2.20697L9.879 6.49997H0.292999V8.49997H9.879L5.586 12.793Z" fill="white" />
+                                </svg>
                             </div>
+                        </div>
 
-                            <div className="space-y-1 text-white">
-                                <h1 className="font-baloo text-4xl">{data.title}</h1>
-                                <p className="font-comforta text-sm tracking-wider">{data.description}</p>
-                            </div>
-                        </section>
-                    </a>
-                </Link>
+                        <div className="space-y-1 text-white">
+                            <h1 className="font-baloo text-4xl">{data.title}</h1>
+                            <p className="font-comforta text-sm tracking-wider">{data.description}</p>
+                        </div>
+                    </section>
+                </a>
             ))}
         </section>
     );
@@ -359,11 +361,11 @@ export default function Home() {
                                 Collection of all my projects and case studies.
                             </h3>
 
-                            <Link href="https://www.behance.net/raflymln" passHref={true}>
+                            <a href="https://www.behance.net/raflymln" target={"_blank"} rel={"noreferrer"}>
                                 <button className="btn bg-theme-blue-very-dark text-white mt-8" data-aos="zoom-in" data-aos-delay="400">
                                     <span className="bg-theme-blue-dark">Interesting, I Want to See More!</span>
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </section>
 
