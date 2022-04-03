@@ -17,7 +17,7 @@ const SocialLink = ({ children, ...props }: any) => {
 
 export default function Footer() {
     return (
-        <footer id="footer" className="relative pt-40 md:pt-56">
+        <footer id="footer" className="relative pt-40 md:pt-56 overflow-hidden">
             {/* Content */}
             <section id="content" className=" w-full z-50">
                 <div className="relative container w-full h-full flex flex-col justify-end items-center z-50 mx-auto space-y-8 py-10">
