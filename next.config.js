@@ -10,7 +10,6 @@ const config = (phase) => {
     let settings = {
         reactStrictMode: true,
         distDir: "build",
-        swcMinify: true,
         pwa: {
             dest: "public",
             runtimeCaching,
