@@ -208,7 +208,7 @@ module.exports = {
         ({ addComponents }) => {
             addComponents({
                 ".container": {
-                    "@apply max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto": {},
+                    "@apply max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto": {},
                 },
                 ".btn": {
                     "@apply rounded-[30px] focus:opacity-80 cursor-pointer": {},
