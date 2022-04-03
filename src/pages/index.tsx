@@ -307,11 +307,11 @@ export default function Home() {
                             But one thing I always stick with everything is, <b>I always do every works as my passion</b>, and that's what makes me happy also giving myself a chance to deliver best
                             works that i can do.
                         </p>
-                        <Link href="http://linkedin.com/in/raflymln" passHref={true}>
-                            <button className="btn bg-theme-green-dark text-white" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
+                        <a href="http://linkedin.com/in/raflymln" target={"_blank"} rel="noreferrer" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
+                            <button className="btn bg-theme-green-dark text-white mt-4" data-aos="fadeIn" data-aos-anchor-placement="center-bottom">
                                 <span className="bg-theme-green-light">Great, Now Tell Me More!</span>
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
 
