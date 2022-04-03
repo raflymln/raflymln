@@ -100,26 +100,142 @@ const Projects = () => {
     );
 };
 
-const Content = ({ children, comingSoon, ...props }: any) => {
+const Content = ({ ...props }: any) => {
+    const Body = () => (
+        <div className="px-10 lg:p-0 relative" data-aos="pulse">
+            <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex items-start md:items-center justify-between flex-col-reverse md:flex-row text-theme-green-light gap-2 transform hover:scale-105 cursor-pointer duration-200 ease-in bg-gradient-to-b from-white to-theme-blue-light box-border">
+                {!props.href && (
+                    <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
+                        <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
+                    </div>
+                )}
+
+                <div className="pt-4 md:pt-0">
+                    <h1 className="font-baloo text-4xl pb-1">{props.title}</h1>
+                    <p className="font-comfortaa text-sm leading-6">{props.description}</p>
+                </div>
+
+                <props.icon />
+            </div>
+        </div>
+    );
+
+    if (props.href && (props.href.indexOf("://") > 0 || props.href.indexOf("//") === 0)) {
+        return (
+            <a href={props.href} target="_blank" rel="noreferrer">
+                <Body />
+            </a>
+        );
+    }
+
     return (
         <Link href={props.href || "#0"} passHref={true}>
-            <div className="px-10 lg:p-0 relative" data-aos="pulse">
-                <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex items-start md:items-center justify-between flex-col-reverse md:flex-row text-theme-green-light gap-2 transform hover:scale-105 cursor-pointer duration-200 ease-in bg-gradient-to-b from-white to-theme-blue-light box-border">
-                    {comingSoon && (
-                        <div className="w-full h-full max-w-md py-7 px-10 rounded-3.5 flex justify-center items-center absolute left-0 top-0 bg-black bg-opacity-50">
-                            <h1 className="font-baloo text-4xl pb-1 text-white">COMING SOON</h1>
-                        </div>
-                    )}
-
-                    <div className="pt-4 md:pt-0">
-                        <h1 className="font-baloo text-4xl pb-1">{props.title}</h1>
-                        <p className="font-comfortaa text-sm leading-6">{props.description}</p>
-                    </div>
-
-                    {children}
-                </div>
-            </div>
+            <Body />
         </Link>
+    );
+};
+
+const Contents = () => {
+    const contents = [
+        {
+            title: "My Agency (Runes)",
+            description: "Take a look at my own creative studio/agency",
+            href: "https://runes.asia",
+            icon: () => (
+                <svg className="h-full max-h-16 w-auto" viewBox="0 0 66 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M55.9489 3.61742C55.3768 2.66878 54.5699 1.88358 53.606 1.33753C52.6421 0.791492 51.5538 0.503039 50.446 0.5H15.554C13.3131 0.5 11.2038 1.69432 10.0512 3.61742L1.35388 18.1097C1.05291 18.6087 0.894149 19.1805 0.894777 19.7632C0.907599 22.862 2.04894 25.85 4.1053 28.1683V55.0789C4.1053 58.6202 6.98515 61.5 10.5264 61.5H55.4737C59.0149 61.5 61.8948 58.6202 61.8948 55.0789V28.1683C63.9511 25.85 65.0925 22.862 65.1053 19.7632C65.1059 19.1805 64.9472 18.6087 64.6462 18.1097L55.9489 3.61742ZM58.6329 20.569C58.4347 22.1191 57.6789 23.544 56.5066 24.5774C55.3344 25.6108 53.8259 26.182 52.2632 26.1842C48.722 26.1842 45.8421 23.3044 45.8421 19.7632C45.8421 19.5448 45.7619 19.3522 45.7169 19.1467L45.7811 19.1339L43.3379 6.92105H50.446L58.6329 20.569ZM29.2084 6.92105H36.7885L39.3986 19.9718C39.2863 23.4135 36.4674 26.1842 33 26.1842C29.5327 26.1842 26.7138 23.4135 26.6015 19.9718L29.2084 6.92105ZM15.554 6.92105H22.6621L20.2221 19.1339L20.2864 19.1467C20.2382 19.3522 20.1579 19.5448 20.1579 19.7632C20.1579 23.3044 17.2781 26.1842 13.7369 26.1842C12.1742 26.182 10.6657 25.6108 9.49346 24.5774C8.32121 23.544 7.56536 22.1191 7.3672 20.569L15.554 6.92105ZM26.579 55.0789V45.4474H39.4211V55.0789H26.579ZM45.8421 55.0789V45.4474C45.8421 41.9062 42.9623 39.0263 39.4211 39.0263H26.579C23.0378 39.0263 20.1579 41.9062 20.1579 45.4474V55.0789H10.5264V32.1494C11.5569 32.4158 12.6196 32.6053 13.7369 32.6053C15.5599 32.6062 17.3621 32.2181 19.023 31.4668C20.684 30.7155 22.1655 29.6183 23.3685 28.2486C25.7218 30.9197 29.1699 32.6053 33 32.6053C36.8302 32.6053 40.2783 30.9197 42.6316 28.2486C43.8346 29.6183 45.3161 30.7155 46.9771 31.4668C48.638 32.2181 50.4402 32.6062 52.2632 32.6053C53.3805 32.6053 54.4431 32.4158 55.4737 32.1494V55.0789H45.8421Z"
+                        fill="#57A773"
+                    />
+                </svg>
+            ),
+        },
+        {
+            title: "Investment",
+            description: "Invest your money for your future, see how i do it!",
+            icon: () => (
+                <svg className="h-full max-h-16 w-auto" viewBox="0 0 95 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.1665 12.6309C4.1665 10.3198 5.08461 8.10326 6.71886 6.46902C8.3531 4.83477 10.5696 3.91666 12.8808 3.91666H82.5951C84.9062 3.91666 87.1228 4.83477 88.757 6.46902C90.3912 8.10326 91.3094 10.3198 91.3094 12.6309V56.2024C91.3094 58.5136 90.3912 60.7301 88.757 62.3643C87.1228 63.9986 84.9062 64.9167 82.5951 64.9167H12.8808C10.5696 64.9167 8.3531 63.9986 6.71886 62.3643C5.08461 60.7301 4.1665 58.5136 4.1665 56.2024V12.6309Z"
+                        stroke="#57A773"
+                        strokeWidth="7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                    <path
+                        d="M47.7384 47.4881C54.9576 47.4881 60.8098 41.6358 60.8098 34.4167C60.8098 27.1975 54.9576 21.3452 47.7384 21.3452C40.5193 21.3452 34.667 27.1975 34.667 34.4167C34.667 41.6358 40.5193 47.4881 47.7384 47.4881Z"
+                        stroke="#57A773"
+                        strokeWidth="7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                    <path
+                        d="M4.1665 21.3452C8.78885 21.3452 13.2219 19.509 16.4904 16.2405C19.7589 12.972 21.5951 8.53901 21.5951 3.91666"
+                        stroke="#57A773"
+                        strokeWidth="7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                    <path
+                        d="M73.8809 64.9167C73.8809 60.2943 75.7171 55.8613 78.9856 52.5928C82.2541 49.3243 86.6871 47.4881 91.3094 47.4881"
+                        stroke="#57A773"
+                        strokeWidth="7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            ),
+        },
+        {
+            title: "Blog",
+            description: "See the world from the perspective of me",
+            icon: () => (
+                <svg className="h-full max-h-16 w-auto" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 51.3333H25.9167V56.4166H0.5V51.3333Z" fill="#57A773" />
+                    <path d="M0.5 36.0833H25.9167V41.1666H0.5V36.0833Z" fill="#57A773" />
+                    <path
+                        d="M56.4167 25.9167H5.58333C4.23515 25.9167 2.94218 25.3811 1.98887 24.4278C1.03556 23.4745 0.5 22.1815 0.5 20.8333V5.58333C0.5 4.23515 1.03556 2.94218 1.98887 1.98887C2.94218 1.03556 4.23515 0.5 5.58333 0.5H56.4167C57.7649 0.5 59.0578 1.03556 60.0111 1.98887C60.9644 2.94218 61.5 4.23515 61.5 5.58333V20.8333C61.5 22.1815 60.9644 23.4745 60.0111 24.4278C59.0578 25.3811 57.7649 25.9167 56.4167 25.9167ZM5.58333 5.58333V20.8333H56.4167V5.58333H5.58333Z"
+                        fill="#57A773"
+                    />
+                    <path
+                        d="M56.4167 61.4999H41.1667C39.8185 61.4999 38.5256 60.9644 37.5722 60.011C36.6189 59.0577 36.0834 57.7648 36.0834 56.4166V41.1666C36.0834 39.8184 36.6189 38.5254 37.5722 37.5721C38.5256 36.6188 39.8185 36.0833 41.1667 36.0833H56.4167C57.7649 36.0833 59.0579 36.6188 60.0112 37.5721C60.9645 38.5254 61.5 39.8184 61.5 41.1666V56.4166C61.5 57.7648 60.9645 59.0577 60.0112 60.011C59.0579 60.9644 57.7649 61.4999 56.4167 61.4999ZM41.1667 41.1666V56.4166H56.4167V41.1666H41.1667Z"
+                        fill="#57A773"
+                    />
+                </svg>
+            ),
+        },
+        {
+            title: "Events",
+            description: "Join the exciting exclamation event hosted by me",
+            icon: () => (
+                <svg className="h-full max-h-16 w-auto" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08508 7.08838H14.2617" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M10.6735 3.5V10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M33.9975 3.5L32.2034 10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M57.3215 7.08838H64.4982" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M60.9098 3.5V10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M46.5566 21.4417L42.9683 25.03" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M57.3215 35.7949L64.4982 34.0007" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M57.3215 57.3247H64.4982" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M60.9098 53.7363V60.913" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                        d="M42.9684 48.4184L19.5797 25.0298L3.82701 59.4058C3.52225 60.0733 3.42875 60.8179 3.55903 61.5399C3.68932 62.262 4.03717 62.9269 4.55598 63.4457C5.07479 63.9646 5.73976 64.3124 6.46181 64.4427C7.18385 64.573 7.92847 64.4795 8.59588 64.1747L42.9684 48.422V48.4184Z"
+                        stroke="#57A773"
+                        strokeWidth="7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            ),
+        },
+    ];
+
+    return (
+        <>
+            {contents.map((content, index) => (
+                <Content key={index} {...content} />
+            ))}
+        </>
     );
 };
 
@@ -213,83 +329,7 @@ export default function Home() {
                         Links & Content
                     </h1>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 box-border" data-aos="zoom-in">
-                        <Content title="Investment" description="Invest your money for your future, see how i do it!" comingSoon>
-                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 95 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.1665 12.6309C4.1665 10.3198 5.08461 8.10326 6.71886 6.46902C8.3531 4.83477 10.5696 3.91666 12.8808 3.91666H82.5951C84.9062 3.91666 87.1228 4.83477 88.757 6.46902C90.3912 8.10326 91.3094 10.3198 91.3094 12.6309V56.2024C91.3094 58.5136 90.3912 60.7301 88.757 62.3643C87.1228 63.9986 84.9062 64.9167 82.5951 64.9167H12.8808C10.5696 64.9167 8.3531 63.9986 6.71886 62.3643C5.08461 60.7301 4.1665 58.5136 4.1665 56.2024V12.6309Z"
-                                    stroke="#57A773"
-                                    strokeWidth="7"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <path
-                                    d="M47.7384 47.4881C54.9576 47.4881 60.8098 41.6358 60.8098 34.4167C60.8098 27.1975 54.9576 21.3452 47.7384 21.3452C40.5193 21.3452 34.667 27.1975 34.667 34.4167C34.667 41.6358 40.5193 47.4881 47.7384 47.4881Z"
-                                    stroke="#57A773"
-                                    strokeWidth="7"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <path
-                                    d="M4.1665 21.3452C8.78885 21.3452 13.2219 19.509 16.4904 16.2405C19.7589 12.972 21.5951 8.53901 21.5951 3.91666"
-                                    stroke="#57A773"
-                                    strokeWidth="7"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                                <path
-                                    d="M73.8809 64.9167C73.8809 60.2943 75.7171 55.8613 78.9856 52.5928C82.2541 49.3243 86.6871 47.4881 91.3094 47.4881"
-                                    stroke="#57A773"
-                                    strokeWidth="7"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </Content>
-
-                        <Content title="Store" description="My products and my services" comingSoon>
-                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 66 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M55.9489 3.61742C55.3768 2.66878 54.5699 1.88358 53.606 1.33753C52.6421 0.791492 51.5538 0.503039 50.446 0.5H15.554C13.3131 0.5 11.2038 1.69432 10.0512 3.61742L1.35388 18.1097C1.05291 18.6087 0.894149 19.1805 0.894777 19.7632C0.907599 22.862 2.04894 25.85 4.1053 28.1683V55.0789C4.1053 58.6202 6.98515 61.5 10.5264 61.5H55.4737C59.0149 61.5 61.8948 58.6202 61.8948 55.0789V28.1683C63.9511 25.85 65.0925 22.862 65.1053 19.7632C65.1059 19.1805 64.9472 18.6087 64.6462 18.1097L55.9489 3.61742ZM58.6329 20.569C58.4347 22.1191 57.6789 23.544 56.5066 24.5774C55.3344 25.6108 53.8259 26.182 52.2632 26.1842C48.722 26.1842 45.8421 23.3044 45.8421 19.7632C45.8421 19.5448 45.7619 19.3522 45.7169 19.1467L45.7811 19.1339L43.3379 6.92105H50.446L58.6329 20.569ZM29.2084 6.92105H36.7885L39.3986 19.9718C39.2863 23.4135 36.4674 26.1842 33 26.1842C29.5327 26.1842 26.7138 23.4135 26.6015 19.9718L29.2084 6.92105ZM15.554 6.92105H22.6621L20.2221 19.1339L20.2864 19.1467C20.2382 19.3522 20.1579 19.5448 20.1579 19.7632C20.1579 23.3044 17.2781 26.1842 13.7369 26.1842C12.1742 26.182 10.6657 25.6108 9.49346 24.5774C8.32121 23.544 7.56536 22.1191 7.3672 20.569L15.554 6.92105ZM26.579 55.0789V45.4474H39.4211V55.0789H26.579ZM45.8421 55.0789V45.4474C45.8421 41.9062 42.9623 39.0263 39.4211 39.0263H26.579C23.0378 39.0263 20.1579 41.9062 20.1579 45.4474V55.0789H10.5264V32.1494C11.5569 32.4158 12.6196 32.6053 13.7369 32.6053C15.5599 32.6062 17.3621 32.2181 19.023 31.4668C20.684 30.7155 22.1655 29.6183 23.3685 28.2486C25.7218 30.9197 29.1699 32.6053 33 32.6053C36.8302 32.6053 40.2783 30.9197 42.6316 28.2486C43.8346 29.6183 45.3161 30.7155 46.9771 31.4668C48.638 32.2181 50.4402 32.6062 52.2632 32.6053C53.3805 32.6053 54.4431 32.4158 55.4737 32.1494V55.0789H45.8421Z"
-                                    fill="#57A773"
-                                />
-                            </svg>
-                        </Content>
-
-                        <Content title="Blog" description="See the world from the perspective of me" comingSoon>
-                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.5 51.3333H25.9167V56.4166H0.5V51.3333Z" fill="#57A773" />
-                                <path d="M0.5 36.0833H25.9167V41.1666H0.5V36.0833Z" fill="#57A773" />
-                                <path
-                                    d="M56.4167 25.9167H5.58333C4.23515 25.9167 2.94218 25.3811 1.98887 24.4278C1.03556 23.4745 0.5 22.1815 0.5 20.8333V5.58333C0.5 4.23515 1.03556 2.94218 1.98887 1.98887C2.94218 1.03556 4.23515 0.5 5.58333 0.5H56.4167C57.7649 0.5 59.0578 1.03556 60.0111 1.98887C60.9644 2.94218 61.5 4.23515 61.5 5.58333V20.8333C61.5 22.1815 60.9644 23.4745 60.0111 24.4278C59.0578 25.3811 57.7649 25.9167 56.4167 25.9167ZM5.58333 5.58333V20.8333H56.4167V5.58333H5.58333Z"
-                                    fill="#57A773"
-                                />
-                                <path
-                                    d="M56.4167 61.4999H41.1667C39.8185 61.4999 38.5256 60.9644 37.5722 60.011C36.6189 59.0577 36.0834 57.7648 36.0834 56.4166V41.1666C36.0834 39.8184 36.6189 38.5254 37.5722 37.5721C38.5256 36.6188 39.8185 36.0833 41.1667 36.0833H56.4167C57.7649 36.0833 59.0579 36.6188 60.0112 37.5721C60.9645 38.5254 61.5 39.8184 61.5 41.1666V56.4166C61.5 57.7648 60.9645 59.0577 60.0112 60.011C59.0579 60.9644 57.7649 61.4999 56.4167 61.4999ZM41.1667 41.1666V56.4166H56.4167V41.1666H41.1667Z"
-                                    fill="#57A773"
-                                />
-                            </svg>
-                        </Content>
-
-                        <Content title="Events" description="Join the exciting exclamation event hosted by me" comingSoon>
-                            <svg className="h-full max-h-16 w-auto" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.08508 7.08838H14.2617" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10.6735 3.5V10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M33.9975 3.5L32.2034 10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M57.3215 7.08838H64.4982" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M60.9098 3.5V10.6766" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M46.5566 21.4417L42.9683 25.03" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M57.3215 35.7949L64.4982 34.0007" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M57.3215 57.3247H64.4982" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M60.9098 53.7363V60.913" stroke="#57A773" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
-                                <path
-                                    d="M42.9684 48.4184L19.5797 25.0298L3.82701 59.4058C3.52225 60.0733 3.42875 60.8179 3.55903 61.5399C3.68932 62.262 4.03717 62.9269 4.55598 63.4457C5.07479 63.9646 5.73976 64.3124 6.46181 64.4427C7.18385 64.573 7.92847 64.4795 8.59588 64.1747L42.9684 48.422V48.4184Z"
-                                    stroke="#57A773"
-                                    strokeWidth="7"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </Content>
+                        <Contents />
                     </div>
                 </div>
 
