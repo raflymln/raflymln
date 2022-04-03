@@ -6,29 +6,39 @@ module.exports = {
         corePlugins: {
             container: false,
         },
-        extend: {
-            fontFamily: {
-                baloo: "Baloo",
-                somatic: "Somatic",
-                comfortaa: "Comfortaa",
+        fontFamily: {
+            baloo: "Baloo",
+            somatic: "Somatic",
+            comfortaa: "Comfortaa",
+        },
+        colors: {
+            transparent: "transparent",
+            current: "currentColor",
+            white: "#ffffff",
+            black: "#2C302E",
+            theme: {
+                green: {
+                    light: "#57A773",
+                    dark: "#157145",
+                },
+                blue: {
+                    light: "#D1FAFF",
+                    medium: "#9BD1E5",
+                    dark: "#40A8CC",
+                    "very-dark": "#3B89A4",
+                },
             },
+            red: {
+                500: "#ef4444",
+                600: "#dc2626",
+            },
+        },
+        extend: {
             fontWeight: {
                 regular: 400,
             },
-            colors: {
-                black: "#2C302E",
-                theme: {
-                    green: {
-                        light: "#57A773",
-                        dark: "#157145",
-                    },
-                    blue: {
-                        light: "#D1FAFF",
-                        medium: "#9BD1E5",
-                        dark: "#40A8CC",
-                        "very-dark": "#3B89A4",
-                    },
-                },
+            cursor: {
+                grabbing: "grabbing",
             },
             borderRadius: {
                 3.5: "1.875rem",
@@ -36,9 +46,6 @@ module.exports = {
             height: {
                 124: "31rem",
                 128: "32rem",
-            },
-            cursor: {
-                grabbing: "grabbing",
             },
             keyframes: {
                 wave: {
