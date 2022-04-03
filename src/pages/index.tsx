@@ -90,7 +90,7 @@ const Projects = () => {
 
                             <div className="space-y-1 text-white">
                                 <h1 className="font-baloo text-4xl">{data.title}</h1>
-                                <p className="font-comforta text-sm tracking-wider truncate">{data.description}</p>
+                                <p className="font-comforta text-sm tracking-wider">{data.description}</p>
                             </div>
                         </section>
                     </a>
