@@ -14,7 +14,7 @@ type User = {
 
 const participants: Channel = {};
 
-// https://141a-180-252-174-8.ngrok.io/api/berantem?act=bantai&toUser="$(touser)"
+// https://raflymaulana.me/api/berantem?act=pukul&toUser="$(touser)"
 export default function BerantemAPI(req: NextApiRequest, res: NextApiResponse) {
     let { act, toUser } = req.query;
 
@@ -29,12 +29,17 @@ export default function BerantemAPI(req: NextApiRequest, res: NextApiResponse) {
 
     const channelId = channel.get("providerId");
     const userName = user.get("displayName");
+    const userId = user.get("providerId");
 
     if (!act || !channelId || !userName) {
         return res.status(400).send("No action specified");
     }
 
     if (!participants[channelId]) {
+        if (userId !== "UCswhauY4r6p3RXgKsVnOlnQ") {
+            return res.status(200).send("Only RAFLY MAULANA can initialize the game on this channel");
+        }
+
         participants[channelId] = {};
     }
 
@@ -79,7 +84,7 @@ export default function BerantemAPI(req: NextApiRequest, res: NextApiResponse) {
             } else if (target.health <= 0) {
                 result = `${target.name} is dead. RIPEP DULU`;
             } else {
-                const isCritical = currentUser.name === "Rafly" ? Math.random() > 0.5 : Math.random() > 0.95;
+                const isCritical = Math.random() > 0.95;
                 const damage = isCritical ? 99999 : Math.floor(Math.random() * 10);
 
                 target.health -= damage;
