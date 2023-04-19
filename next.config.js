@@ -1,8 +1,8 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 const nextImages = require("next-images");
-const nextPWA = require("next-pwa");
+// const nextPWA = require("next-pwa");
 
-const runtimeCaching = require("next-pwa/cache");
+// const runtimeCaching = require("next-pwa/cache");
 const path = require("path");
 
 const config = (phase) => {
@@ -10,10 +10,10 @@ const config = (phase) => {
     let settings = {
         reactStrictMode: true,
         distDir: "build",
-        pwa: {
-            dest: "public",
-            runtimeCaching,
-        },
+        // pwa: {
+        //     dest: "public",
+        //     runtimeCaching,
+        // },
         webpack: (config) => {
             config.resolve.alias = {
                 ...config.resolve.alias,
@@ -25,7 +25,7 @@ const config = (phase) => {
     };
 
     if (phase !== PHASE_DEVELOPMENT_SERVER) {
-        plugins.push(nextPWA);
+        // plugins.push(nextPWA);
     }
 
     return {
