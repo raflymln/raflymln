@@ -1,2 +1,2 @@
-user-agent*
-disallow: /images/illustrations/
+User-agent: *
+Disallow: /images/
